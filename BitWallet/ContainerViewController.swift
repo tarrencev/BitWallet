@@ -18,7 +18,7 @@ class ContainerViewController: UIViewController {
         
         // Create the 3 main view controllers
         var receiveViewController = ReceiveViewController(),
-            transactionsViewController = TransactionsViewController(),
+            sendViewController = SendViewController(),
             profileViewController = ProfileViewController()
         
         // Add each view to container view hierarchy
@@ -26,9 +26,9 @@ class ContainerViewController: UIViewController {
         self.scrollView?.addSubview(profileViewController.view)
         profileViewController.didMoveToParentViewController(self)
         
-        self.addChildViewController(transactionsViewController)
-        self.scrollView?.addSubview(transactionsViewController.view)
-        transactionsViewController.didMoveToParentViewController(self)
+        self.addChildViewController(sendViewController)
+        self.scrollView?.addSubview(sendViewController.view)
+        sendViewController.didMoveToParentViewController(self)
 
         self.addChildViewController(receiveViewController)
         self.scrollView?.addSubview(receiveViewController.view)
@@ -37,9 +37,9 @@ class ContainerViewController: UIViewController {
         // Setup frames of the view controllers to align inside container
         var receiveFrame = receiveViewController.view.frame
         receiveFrame.origin.x = receiveFrame.width
-        transactionsViewController.view.frame = receiveFrame
+        sendViewController.view.frame = receiveFrame
         
-        var transactionsFrame = transactionsViewController.view.frame
+        var transactionsFrame = sendViewController.view.frame
         transactionsFrame.origin.x = 2 * transactionsFrame.width
         profileViewController.view.frame = transactionsFrame;
         

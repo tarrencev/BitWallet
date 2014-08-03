@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1345C804198EC454004A50C5 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345C802198EC454004A50C5 /* TransactionsViewController.swift */; };
-		1345C805198EC454004A50C5 /* TransactionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1345C803198EC454004A50C5 /* TransactionsViewController.xib */; };
+		1345C804198EC454004A50C5 /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345C802198EC454004A50C5 /* SendViewController.swift */; };
+		1345C805198EC454004A50C5 /* SendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1345C803198EC454004A50C5 /* SendViewController.xib */; };
 		1345C808198EC476004A50C5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345C806198EC476004A50C5 /* ProfileViewController.swift */; };
 		1345C809198EC476004A50C5 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1345C807198EC476004A50C5 /* ProfileViewController.xib */; };
 		1345C80C198EC4B4004A50C5 /* ReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345C80A198EC4B4004A50C5 /* ReceiveViewController.swift */; };
@@ -16,6 +16,9 @@
 		1345C810198ECBA6004A50C5 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345C80E198ECBA5004A50C5 /* SetupViewController.swift */; };
 		1345C81A198ECBD0004A50C5 /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345C819198ECBD0004A50C5 /* UserInfoManager.swift */; };
 		1345C81F198EE173004A50C5 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345C81E198EE173004A50C5 /* InitialViewController.swift */; };
+		1345C822198EEE43004A50C5 /* SendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345C820198EEE43004A50C5 /* SendTableViewCell.swift */; };
+		1345C823198EEE43004A50C5 /* SendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1345C821198EEE43004A50C5 /* SendTableViewCell.xib */; };
+		1345C825198EF44A004A50C5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345C824198EF44A004A50C5 /* Utilities.swift */; };
 		1361A2CF198EC3C3004CABAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1361A2CE198EC3C3004CABAD /* AppDelegate.swift */; };
 		1361A2D1198EC3C3004CABAD /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1361A2D0198EC3C3004CABAD /* ContainerViewController.swift */; };
 		1361A2D4198EC3C3004CABAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1361A2D2198EC3C3004CABAD /* Main.storyboard */; };
@@ -34,8 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1345C802198EC454004A50C5 /* TransactionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
-		1345C803198EC454004A50C5 /* TransactionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionsViewController.xib; sourceTree = "<group>"; };
+		1345C802198EC454004A50C5 /* SendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
+		1345C803198EC454004A50C5 /* SendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendViewController.xib; sourceTree = "<group>"; };
 		1345C806198EC476004A50C5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1345C807198EC476004A50C5 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		1345C80A198EC4B4004A50C5 /* ReceiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +46,9 @@
 		1345C80E198ECBA5004A50C5 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		1345C819198ECBD0004A50C5 /* UserInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
 		1345C81E198EE173004A50C5 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		1345C820198EEE43004A50C5 /* SendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendTableViewCell.swift; sourceTree = "<group>"; };
+		1345C821198EEE43004A50C5 /* SendTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendTableViewCell.xib; sourceTree = "<group>"; };
+		1345C824198EF44A004A50C5 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		1361A2C9198EC3C3004CABAD /* BitWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1361A2CD198EC3C3004CABAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1361A2CE198EC3C3004CABAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,8 +81,10 @@
 		1345C81B198ECBD7004A50C5 /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
-				1345C802198EC454004A50C5 /* TransactionsViewController.swift */,
-				1345C803198EC454004A50C5 /* TransactionsViewController.xib */,
+				1345C802198EC454004A50C5 /* SendViewController.swift */,
+				1345C803198EC454004A50C5 /* SendViewController.xib */,
+				1345C820198EEE43004A50C5 /* SendTableViewCell.swift */,
+				1345C821198EEE43004A50C5 /* SendTableViewCell.xib */,
 			);
 			name = Transactions;
 			sourceTree = "<group>";
@@ -131,6 +139,7 @@
 				1361A2D5198EC3C3004CABAD /* Images.xcassets */,
 				1361A2CC198EC3C3004CABAD /* Supporting Files */,
 				1345C81E198EE173004A50C5 /* InitialViewController.swift */,
+				1345C824198EF44A004A50C5 /* Utilities.swift */,
 			);
 			path = BitWallet;
 			sourceTree = "<group>";
@@ -240,11 +249,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1345C805198EC454004A50C5 /* TransactionsViewController.xib in Resources */,
+				1345C805198EC454004A50C5 /* SendViewController.xib in Resources */,
 				1345C80D198EC4B4004A50C5 /* ReceiveViewController.xib in Resources */,
 				1361A2D4198EC3C3004CABAD /* Main.storyboard in Resources */,
 				1345C809198EC476004A50C5 /* ProfileViewController.xib in Resources */,
 				1361A2D6198EC3C3004CABAD /* Images.xcassets in Resources */,
+				1345C823198EEE43004A50C5 /* SendTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,11 +274,13 @@
 			files = (
 				1345C81A198ECBD0004A50C5 /* UserInfoManager.swift in Sources */,
 				1361A2D1198EC3C3004CABAD /* ContainerViewController.swift in Sources */,
-				1345C804198EC454004A50C5 /* TransactionsViewController.swift in Sources */,
+				1345C822198EEE43004A50C5 /* SendTableViewCell.swift in Sources */,
+				1345C804198EC454004A50C5 /* SendViewController.swift in Sources */,
 				1345C80C198EC4B4004A50C5 /* ReceiveViewController.swift in Sources */,
 				1345C808198EC476004A50C5 /* ProfileViewController.swift in Sources */,
 				1345C810198ECBA6004A50C5 /* SetupViewController.swift in Sources */,
 				1361A2CF198EC3C3004CABAD /* AppDelegate.swift in Sources */,
+				1345C825198EF44A004A50C5 /* Utilities.swift in Sources */,
 				1345C81F198EE173004A50C5 /* InitialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
