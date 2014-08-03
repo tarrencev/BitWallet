@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1345C804198EC454004A50C5 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345C802198EC454004A50C5 /* TransactionsViewController.swift */; };
+		1345C805198EC454004A50C5 /* TransactionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1345C803198EC454004A50C5 /* TransactionsViewController.xib */; };
+		1345C808198EC476004A50C5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345C806198EC476004A50C5 /* ProfileViewController.swift */; };
+		1345C809198EC476004A50C5 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1345C807198EC476004A50C5 /* ProfileViewController.xib */; };
+		1345C80C198EC4B4004A50C5 /* ReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345C80A198EC4B4004A50C5 /* ReceiveViewController.swift */; };
+		1345C80D198EC4B4004A50C5 /* ReceiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1345C80B198EC4B4004A50C5 /* ReceiveViewController.xib */; };
+		1345C810198ECBA6004A50C5 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345C80E198ECBA5004A50C5 /* SetupViewController.swift */; };
+		1345C81A198ECBD0004A50C5 /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345C819198ECBD0004A50C5 /* UserInfoManager.swift */; };
+		1345C81F198EE173004A50C5 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345C81E198EE173004A50C5 /* InitialViewController.swift */; };
 		1361A2CF198EC3C3004CABAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1361A2CE198EC3C3004CABAD /* AppDelegate.swift */; };
-		1361A2D1198EC3C3004CABAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1361A2D0198EC3C3004CABAD /* ViewController.swift */; };
+		1361A2D1198EC3C3004CABAD /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1361A2D0198EC3C3004CABAD /* ContainerViewController.swift */; };
 		1361A2D4198EC3C3004CABAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1361A2D2198EC3C3004CABAD /* Main.storyboard */; };
 		1361A2D6198EC3C3004CABAD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1361A2D5198EC3C3004CABAD /* Images.xcassets */; };
 		1361A2E2198EC3C4004CABAD /* BitWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1361A2E1198EC3C4004CABAD /* BitWalletTests.swift */; };
@@ -25,10 +34,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1345C802198EC454004A50C5 /* TransactionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		1345C803198EC454004A50C5 /* TransactionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionsViewController.xib; sourceTree = "<group>"; };
+		1345C806198EC476004A50C5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1345C807198EC476004A50C5 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		1345C80A198EC4B4004A50C5 /* ReceiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveViewController.swift; sourceTree = "<group>"; };
+		1345C80B198EC4B4004A50C5 /* ReceiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceiveViewController.xib; sourceTree = "<group>"; };
+		1345C80E198ECBA5004A50C5 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		1345C819198ECBD0004A50C5 /* UserInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
+		1345C81E198EE173004A50C5 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		1361A2C9198EC3C3004CABAD /* BitWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1361A2CD198EC3C3004CABAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1361A2CE198EC3C3004CABAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1361A2D0198EC3C3004CABAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1361A2D0198EC3C3004CABAD /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		1361A2D3198EC3C3004CABAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1361A2D5198EC3C3004CABAD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1361A2DB198EC3C4004CABAD /* BitWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +72,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1345C81B198ECBD7004A50C5 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				1345C802198EC454004A50C5 /* TransactionsViewController.swift */,
+				1345C803198EC454004A50C5 /* TransactionsViewController.xib */,
+			);
+			name = Transactions;
+			sourceTree = "<group>";
+		};
+		1345C81C198ECBE3004A50C5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1345C806198EC476004A50C5 /* ProfileViewController.swift */,
+				1345C807198EC476004A50C5 /* ProfileViewController.xib */,
+				1345C80E198ECBA5004A50C5 /* SetupViewController.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		1345C81D198ECBFA004A50C5 /* Receive */ = {
+			isa = PBXGroup;
+			children = (
+				1345C80A198EC4B4004A50C5 /* ReceiveViewController.swift */,
+				1345C80B198EC4B4004A50C5 /* ReceiveViewController.xib */,
+			);
+			name = Receive;
+			sourceTree = "<group>";
+		};
 		1361A2C0198EC3C3004CABAD = {
 			isa = PBXGroup;
 			children = (
@@ -75,11 +121,16 @@
 		1361A2CB198EC3C3004CABAD /* BitWallet */ = {
 			isa = PBXGroup;
 			children = (
+				1345C81D198ECBFA004A50C5 /* Receive */,
+				1345C81C198ECBE3004A50C5 /* Profile */,
+				1345C81B198ECBD7004A50C5 /* Transactions */,
 				1361A2CE198EC3C3004CABAD /* AppDelegate.swift */,
-				1361A2D0198EC3C3004CABAD /* ViewController.swift */,
+				1361A2D0198EC3C3004CABAD /* ContainerViewController.swift */,
+				1345C819198ECBD0004A50C5 /* UserInfoManager.swift */,
 				1361A2D2198EC3C3004CABAD /* Main.storyboard */,
 				1361A2D5198EC3C3004CABAD /* Images.xcassets */,
 				1361A2CC198EC3C3004CABAD /* Supporting Files */,
+				1345C81E198EE173004A50C5 /* InitialViewController.swift */,
 			);
 			path = BitWallet;
 			sourceTree = "<group>";
@@ -189,7 +240,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1345C805198EC454004A50C5 /* TransactionsViewController.xib in Resources */,
+				1345C80D198EC4B4004A50C5 /* ReceiveViewController.xib in Resources */,
 				1361A2D4198EC3C3004CABAD /* Main.storyboard in Resources */,
+				1345C809198EC476004A50C5 /* ProfileViewController.xib in Resources */,
 				1361A2D6198EC3C3004CABAD /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,8 +262,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1361A2D1198EC3C3004CABAD /* ViewController.swift in Sources */,
+				1345C81A198ECBD0004A50C5 /* UserInfoManager.swift in Sources */,
+				1361A2D1198EC3C3004CABAD /* ContainerViewController.swift in Sources */,
+				1345C804198EC454004A50C5 /* TransactionsViewController.swift in Sources */,
+				1345C80C198EC4B4004A50C5 /* ReceiveViewController.swift in Sources */,
+				1345C808198EC476004A50C5 /* ProfileViewController.swift in Sources */,
+				1345C810198ECBA6004A50C5 /* SetupViewController.swift in Sources */,
 				1361A2CF198EC3C3004CABAD /* AppDelegate.swift in Sources */,
+				1345C81F198EE173004A50C5 /* InitialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +386,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = BitWallet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -337,6 +398,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = BitWallet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -395,6 +457,7 @@
 				1361A2E7198EC3C4004CABAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1361A2E8198EC3C4004CABAD /* Build configuration list for PBXNativeTarget "BitWalletTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +466,7 @@
 				1361A2EA198EC3C4004CABAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
