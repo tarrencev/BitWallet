@@ -21,6 +21,10 @@ class ContainerViewController: UIViewController {
             sendViewController = SendViewController(),
             profileViewController = ProfileViewController()
         
+        receiveViewController.view.backgroundColor = Utilities.colorize(0x2C3E50, alpha: 1)
+        sendViewController.view.backgroundColor = Utilities.colorize(0x2C3E50, alpha: 1)
+        profileViewController.view.backgroundColor = Utilities.colorize(0x2C3E50, alpha: 1)
+        
         // Add each view to container view hierarchy
         self.addChildViewController(profileViewController)
         self.scrollView?.addSubview(profileViewController.view)

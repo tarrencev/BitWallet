@@ -10,16 +10,18 @@ import UIKit
 
 class SendViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var items = ["We", "Heart", "Swift"],
-    colors = [0x16A085, 0x3498DB, 0x8E44AD, 0x2C3E50, 0xF1C40F, 0xF39C12, 0xC0392B, 0x7F8C8D]
+    var items = ["Wesley V", "John S", "Jordan K", "Andrew D", "Jessica L"],
+        colors = [0x16A085, 0x3498DB, 0x8E44AD, 0x2C3E50, 0xF1C40F, 0xF39C12, 0xC0392B, 0x7F8C8D],
+        selectedIndex: NSIndexPath?
+    
     @IBOutlet var tableView: UITableView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var nib = UINib(nibName: "SendTableViewCell", bundle: nil)
+        var nib = UINib(nibName: "SendInitiatorTableViewCell", bundle: nil)
         
-        tableView!.registerNib(nib, forCellReuseIdentifier: "userCell")
+        tableView!.registerNib(nib, forCellReuseIdentifier: "sendInitiatorCell")
         tableView!.backgroundColor = Utilities.colorize(0x2C3E50, alpha: 1)
         tableView!.separatorColor = UIColor.clearColor()
     }
@@ -29,12 +31,16 @@ class SendViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Dispose of any resources that can be recreated.
     }
     
+    func cellIsSelected(cellIndex: NSIndexPath) -> Bool {
+        return selectedIndex && selectedIndex == cellIndex ? true : false
+    }
+    
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         return self.items.count
     }
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        var cell:SendTableViewCell = self.tableView!.dequeueReusableCellWithIdentifier("userCell") as SendTableViewCell
+        var cell:SendInitiatorTableViewCell = self.tableView!.dequeueReusableCellWithIdentifier("sendInitiatorCell") as SendInitiatorTableViewCell
         
         cell.setUsername(items[indexPath.row], color: colors[indexPath.row])
         
@@ -42,7 +48,19 @@ class SendViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
-        println("You selected cell #\(indexPath.row)!")
+        selectedIndex = indexPath
+
+        tableView.beginUpdates()
+        tableView.endUpdates()
+    }
+    
+    func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+        
+        if cellIsSelected(indexPath) {
+            return 264
+        }
+        
+        return 65
     }
     
 
