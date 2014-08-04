@@ -49,8 +49,9 @@ class ContainerViewController: UIViewController {
         
         // Set scrollView size to contain the frames
         var scrollWidth = 3 * self.view.frame.width,
-            scrollHeight = self.view.frame.size.height
+            scrollHeight = self.view.frame.size.height - 20
         self.scrollView!.contentSize = CGSizeMake(scrollWidth, scrollHeight)
+        self.scrollView!.setContentOffset(CGPoint(x: receiveFrame.width, y: 0), animated: false)
     }
 
     override func didReceiveMemoryWarning() {

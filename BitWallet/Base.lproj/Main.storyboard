@@ -45,12 +45,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXD-1N-tGv">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXD-1N-tGv">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wXD-1N-tGv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="j5k-jU-qY4"/>
+                            <constraint firstAttribute="trailing" secondItem="wXD-1N-tGv" secondAttribute="trailing" id="wYw-nn-pOw"/>
+                            <constraint firstAttribute="bottom" secondItem="wXD-1N-tGv" secondAttribute="bottom" id="xCi-hq-gQY"/>
+                            <constraint firstItem="wXD-1N-tGv" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="z4b-5Y-url"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="q5o-LG-JhL"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>

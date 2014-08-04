@@ -24,10 +24,10 @@
 		1361A2D4198EC3C3004CABAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1361A2D2198EC3C3004CABAD /* Main.storyboard */; };
 		1361A2D6198EC3C3004CABAD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1361A2D5198EC3C3004CABAD /* Images.xcassets */; };
 		1361A2E2198EC3C4004CABAD /* BitWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1361A2E1198EC3C4004CABAD /* BitWalletTests.swift */; };
-		13BDA59E198F0DB0009A1337 /* ExpandableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BDA59D198F0DB0009A1337 /* ExpandableTableViewController.swift */; };
-		13BDA5A0198F1540009A1337 /* ExpandableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BDA59F198F1540009A1337 /* ExpandableTableView.swift */; };
 		13BDA5A3198F18F8009A1337 /* SendInitiatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BDA5A1198F18F8009A1337 /* SendInitiatorTableViewCell.swift */; };
 		13BDA5A4198F18F8009A1337 /* SendInitiatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13BDA5A2198F18F8009A1337 /* SendInitiatorTableViewCell.xib */; };
+		13BDA5A7198F370E009A1337 /* SectionHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BDA5A5198F370E009A1337 /* SectionHeaderViewController.swift */; };
+		13BDA5A8198F370E009A1337 /* SectionHeaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13BDA5A6198F370E009A1337 /* SectionHeaderViewController.xib */; };
 		187E16A05675405CAD606ABD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3F6887541E49CC9F7B2407 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -65,10 +65,10 @@
 		1361A2E0198EC3C4004CABAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1361A2E1198EC3C4004CABAD /* BitWalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitWalletTests.swift; sourceTree = "<group>"; };
 		13BDA59A198F06DB009A1337 /* BitWallet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BitWallet-Bridging-Header.h"; sourceTree = "<group>"; };
-		13BDA59D198F0DB0009A1337 /* ExpandableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewController.swift; sourceTree = "<group>"; };
-		13BDA59F198F1540009A1337 /* ExpandableTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableTableView.swift; sourceTree = "<group>"; };
 		13BDA5A1198F18F8009A1337 /* SendInitiatorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendInitiatorTableViewCell.swift; sourceTree = "<group>"; };
 		13BDA5A2198F18F8009A1337 /* SendInitiatorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendInitiatorTableViewCell.xib; sourceTree = "<group>"; };
+		13BDA5A5198F370E009A1337 /* SectionHeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderViewController.swift; sourceTree = "<group>"; };
+		13BDA5A6198F370E009A1337 /* SectionHeaderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeaderViewController.xib; sourceTree = "<group>"; };
 		BF3F6887541E49CC9F7B2407 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -100,6 +100,8 @@
 				1345C821198EEE43004A50C5 /* SendTableViewCell.xib */,
 				13BDA5A1198F18F8009A1337 /* SendInitiatorTableViewCell.swift */,
 				13BDA5A2198F18F8009A1337 /* SendInitiatorTableViewCell.xib */,
+				13BDA5A5198F370E009A1337 /* SectionHeaderViewController.swift */,
+				13BDA5A6198F370E009A1337 /* SectionHeaderViewController.xib */,
 			);
 			name = Send;
 			sourceTree = "<group>";
@@ -158,8 +160,6 @@
 				1345C81E198EE173004A50C5 /* InitialViewController.swift */,
 				1345C824198EF44A004A50C5 /* Utilities.swift */,
 				13BDA59A198F06DB009A1337 /* BitWallet-Bridging-Header.h */,
-				13BDA59D198F0DB0009A1337 /* ExpandableTableViewController.swift */,
-				13BDA59F198F1540009A1337 /* ExpandableTableView.swift */,
 			);
 			path = BitWallet;
 			sourceTree = "<group>";
@@ -284,6 +284,7 @@
 				1361A2D4198EC3C3004CABAD /* Main.storyboard in Resources */,
 				1345C809198EC476004A50C5 /* ProfileViewController.xib in Resources */,
 				1361A2D6198EC3C3004CABAD /* Images.xcassets in Resources */,
+				13BDA5A8198F370E009A1337 /* SectionHeaderViewController.xib in Resources */,
 				1345C823198EEE43004A50C5 /* SendTableViewCell.xib in Resources */,
 				13BDA5A4198F18F8009A1337 /* SendInitiatorTableViewCell.xib in Resources */,
 			);
@@ -339,8 +340,8 @@
 				1345C81A198ECBD0004A50C5 /* UserInfoManager.swift in Sources */,
 				13BDA5A3198F18F8009A1337 /* SendInitiatorTableViewCell.swift in Sources */,
 				1361A2D1198EC3C3004CABAD /* ContainerViewController.swift in Sources */,
-				13BDA59E198F0DB0009A1337 /* ExpandableTableViewController.swift in Sources */,
 				1345C822198EEE43004A50C5 /* SendTableViewCell.swift in Sources */,
+				13BDA5A7198F370E009A1337 /* SectionHeaderViewController.swift in Sources */,
 				1345C804198EC454004A50C5 /* SendViewController.swift in Sources */,
 				1345C80C198EC4B4004A50C5 /* ReceiveViewController.swift in Sources */,
 				1345C808198EC476004A50C5 /* ProfileViewController.swift in Sources */,
@@ -348,7 +349,6 @@
 				1361A2CF198EC3C3004CABAD /* AppDelegate.swift in Sources */,
 				1345C825198EF44A004A50C5 /* Utilities.swift in Sources */,
 				1345C81F198EE173004A50C5 /* InitialViewController.swift in Sources */,
-				13BDA5A0198F1540009A1337 /* ExpandableTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
