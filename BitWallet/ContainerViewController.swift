@@ -52,6 +52,7 @@ class ContainerViewController: UIViewController {
             scrollHeight = self.view.frame.size.height - 20
         self.scrollView!.contentSize = CGSizeMake(scrollWidth, scrollHeight)
         self.scrollView!.setContentOffset(CGPoint(x: receiveFrame.width, y: 0), animated: false)
+        self.view.backgroundColor = Utilities.colorize(0x2C3E50, alpha: 1)
     }
 
     override func didReceiveMemoryWarning() {
