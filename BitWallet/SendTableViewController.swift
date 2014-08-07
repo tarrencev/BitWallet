@@ -11,9 +11,9 @@ import UIKit
 class SendTableViewController: UITableViewController {
     
     let sections = ["Nearby", "Recent", "Favorites"],
-    sendItems = ["Wesley V", "John S", "Jordan K",
+    sendItems = ["Search", "Wesley V", "John S", "Jordan K",
         "Andrew D", "Jessica L", "Mom"],
-    colors = [0x16A085, 0x3498DB, 0x8E44AD, 0x2C3E50, 0xF1C40F, 0xF39C12, 0xC0392B, 0x7F8C8D]
+    colors = [0x3498DB, 0x8E44AD, 0xF1C40F, 0xF39C12, 0xC0392B, 0x3498DB, 0x16A085]
     
     var selectedIndex: NSIndexPath?
     
@@ -24,26 +24,34 @@ class SendTableViewController: UITableViewController {
     func calcTopOffsetToCell(indexPath: NSIndexPath) -> Int {
         return 65 * indexPath.row;
     }
+    
+    func refresh() {
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nib = UINib(nibName: "SendInitiatorTableViewCell", bundle: nil)
-        tableView.registerNib(nib, forCellReuseIdentifier: "sendInitiatorCell")
-        tableView.backgroundColor = Utilities.colorize(0x2C3E50, alpha: 1)
+        let sendInitiatorCellNib = UINib(nibName: "SendInitiatorTableViewCell", bundle: nil),
+            searchCellNib = UINib(nibName: "SearchTableViewCell", bundle: nil)
+        tableView.registerNib(sendInitiatorCellNib, forCellReuseIdentifier: "sendInitiatorCell")
+        tableView.registerNib(searchCellNib, forCellReuseIdentifier: "searchCell")
+        tableView.backgroundColor = Utilities.baseColor()
         tableView.separatorColor = UIColor.clearColor()
+        
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refersh")
+        refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.addSubview(refreshControl)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
         return 1
     }
 
@@ -53,27 +61,36 @@ class SendTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        var cell = self.tableView!.dequeueReusableCellWithIdentifier("sendInitiatorCell") as SendInitiatorTableViewCell
         
-        cell.setUsername(sendItems[indexPath.row], color: colors[indexPath.row])
-
-        return cell
+        if (indexPath.row == 0) {
+            var cell = self.tableView!.dequeueReusableCellWithIdentifier("searchCell") as SearchTableViewCell
+            
+            return cell
+        } else {
+            var cell = self.tableView!.dequeueReusableCellWithIdentifier("sendInitiatorCell") as SendInitiatorTableViewCell
+            
+            cell.setUsername(sendItems[indexPath.row], color: colors[indexPath.row])
+            
+            return cell
+        }
     }
     
     override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as SendInitiatorTableViewCell
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as SendInitiatorTableViewCell,
+            notificationCenter = NSNotificationCenter.defaultCenter()
         
         // Selected the same cell again so collapse it
         if selectedIndex == indexPath {
-            UIView.animateWithDuration(0.2, animations: {
+            notificationCenter.postNotification("sendCellSelected")
+            
+            UIView.animateWithDuration(0.5, animations: {
                 tableView.frame = CGRectMake(tableView.frame.origin.x, 0, tableView.frame.size.width, tableView.frame.size.height + 190)
-                }, completion: { (finished: Bool) in
-                    
-            })
+                })
             
             cell.amountTextfield.resignFirstResponder()
-            
-            // Dismiss keyboard
+            cell.amountTextfield.text = ""
+            cell.noteTextField.resignFirstResponder()
+            cell.noteTextField.text = ""
             
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
             selectedIndex = nil
@@ -84,12 +101,11 @@ class SendTableViewController: UITableViewController {
             tableView.scrollEnabled = false
             
             // Select keyboard
-            UIView.animateWithDuration(0.1, animations: {
-                tableView.frame = CGRectMake(tableView.frame.origin.x, 0 - CGFloat(self.calcTopOffsetToCell(indexPath)), tableView.frame.size.width, tableView.frame.size.height + 190)
-                }, completion: { (finished: Bool) in
-                    self.selectedIndex = indexPath
-                    cell.amountTextfield.becomeFirstResponder()
+            UIView.animateWithDuration(0.5, animations: {
+                tableView.frame = CGRectMake(tableView.frame.origin.x, 0 - CGFloat(self.calcTopOffsetToCell(indexPath) - 20), tableView.frame.size.width, tableView.frame.size.height + 190)
             })
+            
+            cell.amountTextfield.becomeFirstResponder()
             
             selectedIndex = indexPath
         }
@@ -102,6 +118,8 @@ class SendTableViewController: UITableViewController {
     override func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
         if cellIsSelected(indexPath) {
             return 335
+        } else if (indexPath.row == 0) {
+            return 44
         }
         
         return 65

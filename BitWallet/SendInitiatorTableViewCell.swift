@@ -37,12 +37,12 @@ class SendInitiatorTableViewCell: UITableViewCell, UITextFieldDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        var closeButton = UIButton()
-        closeButton.frame = CGRectMake(260, 0, 65, 65)
-        closeButton.transform = CGAffineTransformMakeRotation(CGFloat(M_PI / -4))
-        closeButton.setTitle("+", forState: UIControlState.Normal)
-        closeButton.titleLabel.font = UIFont(name: "Helvetica", size: 50)
-        self.addSubview(closeButton)
+//        var closeButton = UIButton()
+//        closeButton.frame = CGRectMake(260, 0, 65, 65)
+//        closeButton.transform = CGAffineTransformMakeRotation(CGFloat(M_PI / -4))
+//        closeButton.setTitle("+", forState: UIControlState.Normal)
+//        closeButton.titleLabel.font = UIFont(name: "Helvetica", size: 50)
+//        self.addSubview(closeButton)
     }
 
     
@@ -52,11 +52,11 @@ class SendInitiatorTableViewCell: UITableViewCell, UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(textField: UITextField!) {    //delegate method
-        println("editing")
     }
     
     func textField(textField: UITextField!, shouldChangeCharactersInRange range: NSRange, replacementString string: String!) -> Bool {
         let text: String = textField.text
+        println(textField.text)
         if countElements(text) == 0 {
             textField.text = "฿" + string
             

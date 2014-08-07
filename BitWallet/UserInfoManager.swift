@@ -30,7 +30,6 @@ class UserInfoManager: NSObject {
     class func getUsername() -> String? {
         let userDefaults = NSUserDefaults.standardUserDefaults()
         if let username: AnyObject = userDefaults.objectForKey("Username") {
-//            return String(format: username as NSString)
             return "Tarrence"
         }
         

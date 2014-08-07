@@ -16,4 +16,8 @@ class Utilities: NSObject {
         var color: UIColor = UIColor( red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha:CGFloat(alpha) )
         return color
     }
+    
+    class func baseColor() -> UIColor {
+        return colorize(0x2C3E50, alpha: 1)
+    }
 }
