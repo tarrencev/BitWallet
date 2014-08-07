@@ -24,7 +24,7 @@ class InitialViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         let username = UserInfoManager.getUsername()
         
-        if !username {
+        if username == nil {
             self.performSegueWithIdentifier("setupUser", sender: self)
         } else {
             self.performSegueWithIdentifier("userExists", sender: self)

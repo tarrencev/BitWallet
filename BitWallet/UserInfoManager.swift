@@ -30,7 +30,8 @@ class UserInfoManager: NSObject {
     class func getUsername() -> String? {
         let userDefaults = NSUserDefaults.standardUserDefaults()
         if let username: AnyObject = userDefaults.objectForKey("Username") {
-            return String(username as NSString)
+//            return String(format: username as NSString)
+            return "Tarrence"
         }
         
         return nil;
@@ -39,7 +40,7 @@ class UserInfoManager: NSObject {
     class func getBeaconUUID() -> String? {
         let beaconUUIDString = NSUserDefaults.standardUserDefaults().objectForKey("BeaconUUID") as NSString
         if beaconUUIDString.length > 0 {
-            return String(beaconUUIDString)
+            return String(format: beaconUUIDString)
         }
         
         return nil;

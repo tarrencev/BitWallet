@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bDr-2k-I6C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bDr-2k-I6C">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
     <scenes>
         <!--Initial View Controller-->
         <scene sceneID="vBR-Av-mkW">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="R89-fc-hZr" customClass="InitialViewController" customModule="BitWallet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="R89-fc-hZr" customClass="InitialViewController" customModule="BitWallet" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d4S-uN-DeE"/>
                         <viewControllerLayoutGuide type="bottom" id="7GX-pS-vf0"/>
@@ -25,8 +25,8 @@
                         <size key="landscapeSize" width="568" height="320"/>
                     </simulatedScreenMetrics>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="showDetail" identifier="userExists" id="Pp9-eD-yBf"/>
-                        <segue destination="S4K-KD-jqB" kind="showDetail" identifier="setupUser" id="cbR-5o-KPw"/>
+                        <segue destination="vXZ-lx-hvc" kind="push" identifier="userExists" id="Pp9-eD-yBf"/>
+                        <segue destination="S4K-KD-jqB" kind="push" identifier="setupUser" id="cbR-5o-KPw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUb-Va-Eyz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -36,7 +36,7 @@
         <!--Container View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="ContainerView" id="vXZ-lx-hvc" customClass="ContainerViewController" customModule="BitWallet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContainerView" id="vXZ-lx-hvc" customClass="ContainerViewController" customModule="BitWallet" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -75,7 +75,7 @@
         <!--Setup View Controller-->
         <scene sceneID="WcE-wb-N8s">
             <objects>
-                <viewController storyboardIdentifier="SetUpView" id="S4K-KD-jqB" customClass="SetupViewController" customModule="BitWallet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SetUpView" id="S4K-KD-jqB" customClass="SetupViewController" customModule="BitWallet" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sYp-7l-WhY"/>
                         <viewControllerLayoutGuide type="bottom" id="pGB-aN-uHo"/>
@@ -116,7 +116,7 @@
                     </simulatedScreenMetrics>
                     <connections>
                         <outlet property="usernameTextField" destination="HTL-FH-NCb" id="sBj-gY-0DX"/>
-                        <segue destination="vXZ-lx-hvc" kind="showDetail" identifier="setupComplete" id="QY2-bv-TDW"/>
+                        <segue destination="vXZ-lx-hvc" kind="push" identifier="setupComplete" id="QY2-bv-TDW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BGz-jt-ZIa" sceneMemberID="firstResponder"/>
@@ -148,6 +148,14 @@
             <point key="canvasLocation" x="2123" y="33"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination">
+            <size key="portraitSize" width="320" height="480"/>
+            <size key="landscapeSize" width="480" height="320"/>
+        </simulatedScreenMetrics>
+    </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="QY2-bv-TDW"/>
     </inferredMetricsTieBreakers>

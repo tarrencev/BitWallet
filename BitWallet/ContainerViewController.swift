@@ -18,7 +18,7 @@ class ContainerViewController: UIViewController {
         
         // Create the 3 main view controllers
         var receiveViewController = ReceiveViewController(),
-            sendViewController = SendViewController(),
+            sendViewController = SendTableViewController(),
             profileViewController = ProfileViewController()
         
         receiveViewController.view.backgroundColor = Utilities.colorize(0x2C3E50, alpha: 1)
