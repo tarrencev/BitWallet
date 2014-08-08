@@ -8,7 +8,10 @@
 
 import UIKit
 
+let colors = [0x3498DB, 0x8E44AD, 0xF1C40F, 0xF39C12, 0xC0392B, 0x2C3E50, 0x16A085]
+
 class Utilities: NSObject {
+    
     class func colorize (hex: Int, alpha: Double = 1.0) -> UIColor {
         let red = Double((hex & 0xFF0000) >> 16) / 255.0
         let green = Double((hex & 0xFF00) >> 8) / 255.0
@@ -18,6 +21,10 @@ class Utilities: NSObject {
     }
     
     class func baseColor() -> UIColor {
-        return colorize(0x2C3E50, alpha: 1)
+        return colorize(0x3498DB, alpha: 1)
+    }
+    
+    class func getColorForRow(row: Int) -> UIColor {
+        return colorize(colors[row % colors.count], alpha: 1)
     }
 }

@@ -15,16 +15,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SgB-zF-Dph">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="32" y="0.0" width="257" height="44"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="search"/>
+                        <connections>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="qcj-AM-M0M"/>
+                        </connections>
                     </textField>
                 </subviews>
             </tableViewCellContentView>
             <connections>
                 <outlet property="searchTextField" destination="SgB-zF-Dph" id="lPp-pv-83H"/>
             </connections>
+            <point key="canvasLocation" x="138" y="154"/>
         </tableViewCell>
     </objects>
 </document>

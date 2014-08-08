@@ -8,12 +8,13 @@
 
 import UIKit
 
-class SendTableViewController: UITableViewController {
+class SendTableViewController: UITableViewController, SendInitiatorCellDelegate {
     
     let sections = ["Nearby", "Recent", "Favorites"],
     sendItems = ["Search", "Wesley V", "John S", "Jordan K",
-        "Andrew D", "Jessica L", "Mom"],
-    colors = [0x3498DB, 0x8E44AD, 0xF1C40F, 0xF39C12, 0xC0392B, 0x3498DB, 0x16A085]
+        "Andrew D", "Jessica L", "Mom", "Jake O", "Jeff B", "Zach W",
+        "Peter P"]
+    
     
     var selectedIndex: NSIndexPath?
     
@@ -25,8 +26,9 @@ class SendTableViewController: UITableViewController {
         return 65 * indexPath.row;
     }
     
-    func refresh() {
-        
+    func closeCell(cell: SendInitiatorTableViewCell) {
+        let indexPath = tableView.indexPathForCell(cell as UITableViewCell)
+        closeInitiatorCell(cell, indexPath: indexPath)
     }
 
     override func viewDidLoad() {
@@ -38,11 +40,6 @@ class SendTableViewController: UITableViewController {
         tableView.registerNib(searchCellNib, forCellReuseIdentifier: "searchCell")
         tableView.backgroundColor = Utilities.baseColor()
         tableView.separatorColor = UIColor.clearColor()
-        
-        refreshControl = UIRefreshControl()
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refersh")
-        refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
-        tableView.addSubview(refreshControl)
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,10 +66,42 @@ class SendTableViewController: UITableViewController {
         } else {
             var cell = self.tableView!.dequeueReusableCellWithIdentifier("sendInitiatorCell") as SendInitiatorTableViewCell
             
-            cell.setUsername(sendItems[indexPath.row], color: colors[indexPath.row])
+            cell.setUsername(sendItems[indexPath.row])
+            cell.setColor(Utilities.getColorForRow(indexPath.row))
+            cell.delegate = self
             
             return cell
         }
+    }
+    
+    func closeInitiatorCell(cell: SendInitiatorTableViewCell, indexPath: NSIndexPath) {
+        UIView.animateWithDuration(0.3, animations: {
+            self.tableView.frame = CGRectMake(self.tableView.frame.origin.x, 0, self.tableView.frame.width, UIScreen.mainScreen().bounds.size.height - 20)
+        })
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        selectedIndex = nil
+        cell.close()
+
+        tableView.scrollEnabled = true
+        
+        tableView.beginUpdates()
+        tableView.endUpdates()
+    }
+    
+    func openInitiatorCell(cell: SendInitiatorTableViewCell, indexPath: NSIndexPath) {
+        tableView.scrollEnabled = false
+        
+        // Select keyboard
+        UIView.animateWithDuration(0.3, animations: {
+            self.tableView.frame = CGRectMake(self.tableView.frame.origin.x, 0 - CGFloat(self.calcTopOffsetToCell(indexPath) - 20), self.tableView.frame.size.width, self.tableView.frame.size.height + 190)
+        })
+        
+        selectedIndex = indexPath
+        cell.open()
+
+        tableView.beginUpdates()
+        tableView.endUpdates()
     }
     
     override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
@@ -81,37 +110,11 @@ class SendTableViewController: UITableViewController {
         
         // Selected the same cell again so collapse it
         if selectedIndex == indexPath {
-            notificationCenter.postNotification("sendCellSelected")
-            
-            UIView.animateWithDuration(0.5, animations: {
-                tableView.frame = CGRectMake(tableView.frame.origin.x, 0, tableView.frame.size.width, tableView.frame.size.height + 190)
-                })
-            
-            cell.amountTextfield.resignFirstResponder()
-            cell.amountTextfield.text = ""
-            cell.noteTextField.resignFirstResponder()
-            cell.noteTextField.text = ""
-            
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
-            selectedIndex = nil
-            
-            tableView.scrollEnabled = true
+            closeInitiatorCell(cell, indexPath: indexPath)
         } else {
-            
-            tableView.scrollEnabled = false
-            
-            // Select keyboard
-            UIView.animateWithDuration(0.5, animations: {
-                tableView.frame = CGRectMake(tableView.frame.origin.x, 0 - CGFloat(self.calcTopOffsetToCell(indexPath) - 20), tableView.frame.size.width, tableView.frame.size.height + 190)
-            })
-            
-            cell.amountTextfield.becomeFirstResponder()
-            
-            selectedIndex = indexPath
+            openInitiatorCell(cell, indexPath: indexPath)
         }
         
-        tableView.beginUpdates()
-        tableView.endUpdates()
     }
     
     // Set row height

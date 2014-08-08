@@ -10,6 +10,7 @@
 		133EA7BE1993263100BCA19E /* SendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133EA7BD1993263100BCA19E /* SendTableViewController.swift */; };
 		133EA7C51993D15D00BCA19E /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133EA7C31993D15D00BCA19E /* SearchTableViewCell.swift */; };
 		133EA7C61993D15D00BCA19E /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 133EA7C41993D15D00BCA19E /* SearchTableViewCell.xib */; };
+		133EA7C91994626100BCA19E /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133EA7C81994626100BCA19E /* CloseButton.swift */; };
 		1345C808198EC476004A50C5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345C806198EC476004A50C5 /* ProfileViewController.swift */; };
 		1345C809198EC476004A50C5 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1345C807198EC476004A50C5 /* ProfileViewController.xib */; };
 		1345C80C198EC4B4004A50C5 /* ReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345C80A198EC4B4004A50C5 /* ReceiveViewController.swift */; };
@@ -45,6 +46,7 @@
 		133EA7BD1993263100BCA19E /* SendTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendTableViewController.swift; sourceTree = "<group>"; };
 		133EA7C31993D15D00BCA19E /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		133EA7C41993D15D00BCA19E /* SearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		133EA7C81994626100BCA19E /* CloseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		1345C806198EC476004A50C5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1345C807198EC476004A50C5 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		1345C80A198EC4B4004A50C5 /* ReceiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				1361A2D5198EC3C3004CABAD /* Images.xcassets */,
 				1361A2CC198EC3C3004CABAD /* Supporting Files */,
 				13BDA59A198F06DB009A1337 /* BitWallet-Bridging-Header.h */,
+				133EA7C81994626100BCA19E /* CloseButton.swift */,
 			);
 			path = BitWallet;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				13BDA5A7198F370E009A1337 /* SectionHeaderViewController.swift in Sources */,
 				1345C80C198EC4B4004A50C5 /* ReceiveViewController.swift in Sources */,
 				1345C808198EC476004A50C5 /* ProfileViewController.swift in Sources */,
+				133EA7C91994626100BCA19E /* CloseButton.swift in Sources */,
 				1345C810198ECBA6004A50C5 /* SetupViewController.swift in Sources */,
 				1361A2CF198EC3C3004CABAD /* AppDelegate.swift in Sources */,
 				1345C825198EF44A004A50C5 /* Utilities.swift in Sources */,

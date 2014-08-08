@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol SendInitiatorCellDelegate {
+    func closeCell(cell: SendInitiatorTableViewCell)
+}
+
 class SendInitiatorTableViewCell: UITableViewCell, UITextFieldDelegate {
 
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var amountTextfield: UITextField!
     @IBOutlet weak var noteTextField: UITextField!
+    var closeButton = CloseButton(),
+        delegate: SendInitiatorCellDelegate?
     
     @IBAction func sendButton(sender: AnyObject) {
         println("Send")
@@ -37,18 +43,44 @@ class SendInitiatorTableViewCell: UITableViewCell, UITextFieldDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-//        var closeButton = UIButton()
-//        closeButton.frame = CGRectMake(260, 0, 65, 65)
-//        closeButton.transform = CGAffineTransformMakeRotation(CGFloat(M_PI / -4))
-//        closeButton.setTitle("+", forState: UIControlState.Normal)
-//        closeButton.titleLabel.font = UIFont(name: "Helvetica", size: 50)
-//        self.addSubview(closeButton)
+        self.closeButton.addTarget(self, action: "closeBtnPress", forControlEvents: UIControlEvents.TouchUpInside)
+        self.closeButton.frame = CGRectMake(265 + 70, 0, 65, 65)
+        self.addSubview(closeButton)
+    }
+    
+    func open() {
+        UIView.animateWithDuration(0.3, animations: {
+            var buttonCenter = self.closeButton.center
+            buttonCenter.x = buttonCenter.x - 70
+            self.closeButton.center = buttonCenter
+        })
+        amountTextfield.becomeFirstResponder()
+    }
+    
+    func closeBtnPress() {
+        if delegate != nil {
+            delegate?.closeCell(self)
+        }
+    }
+    
+    func close() {
+        UIView.animateWithDuration(0.3, animations: {
+            var buttonCenter = self.closeButton.center
+            buttonCenter.x = buttonCenter.x + 70
+            self.closeButton.center = buttonCenter
+        })
+        amountTextfield.text = ""
+        noteTextField.text = ""
+        amountTextfield.resignFirstResponder()
+        noteTextField.resignFirstResponder()
     }
 
-    
-    func setUsername(usernameString: String, color: Int) {
-        self.backgroundColor = Utilities.colorize(color, alpha: 1)
+    func setUsername(usernameString: String) {
         usernameLabel.text = usernameString
+    }
+    
+    func setColor(color: UIColor) {
+        self.backgroundColor = color
     }
     
     func textFieldDidBeginEditing(textField: UITextField!) {    //delegate method

@@ -21,9 +21,9 @@ class ContainerViewController: UIViewController {
             sendViewController = SendTableViewController(),
             profileViewController = ProfileViewController()
         
-        receiveViewController.view.backgroundColor = Utilities.colorize(0x2C3E50, alpha: 1)
-        sendViewController.view.backgroundColor = Utilities.colorize(0x2C3E50, alpha: 1)
-        profileViewController.view.backgroundColor = Utilities.colorize(0x2C3E50, alpha: 1)
+        receiveViewController.view.backgroundColor = Utilities.baseColor()
+        sendViewController.view.backgroundColor = Utilities.baseColor()
+        profileViewController.view.backgroundColor = Utilities.baseColor()
         
         // Add each view to container view hierarchy
         self.addChildViewController(profileViewController)
@@ -52,7 +52,7 @@ class ContainerViewController: UIViewController {
             scrollHeight = self.view.frame.size.height - 20
         self.scrollView!.contentSize = CGSizeMake(scrollWidth, scrollHeight)
         self.scrollView!.setContentOffset(CGPoint(x: receiveFrame.width, y: 0), animated: false)
-        self.view.backgroundColor = Utilities.colorize(0x2C3E50, alpha: 1)
+        self.view.backgroundColor = Utilities.baseColor()
     }
 
     override func didReceiveMemoryWarning() {
