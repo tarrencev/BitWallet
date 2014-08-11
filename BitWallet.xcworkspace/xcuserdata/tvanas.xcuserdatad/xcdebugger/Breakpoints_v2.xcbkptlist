@@ -26,13 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BitWallet/SendViewController.swift"
-            timestampString = "429074188.677332"
+            timestampString = "429490750.434377"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "tableView(_:didSelectRowAtIndexPath:)"
-            landmarkType = "5">
+            endingLineNumber = "84">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -73,13 +71,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BitWallet/SendViewController.swift"
-            timestampString = "429074188.677332"
+            filePath = "BitWallet/SendInitiatorTableViewCell.swift"
+            timestampString = "429479530.960962"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "close()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

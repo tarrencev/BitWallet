@@ -8,18 +8,18 @@
 
 import UIKit
 
-class ContainerViewController: UIViewController {
+class ContainerViewController: UIViewController, UIScrollViewDelegate {
     
-    @IBOutlet var scrollView: UIScrollView?;
-                            
+    // Create the 3 main view controllers
+    var receiveViewController = ReceiveViewController(),
+        sendViewController = SendViewController(),
+        profileViewController = ProfileViewController(),
+        curScrollPage: Int?
+
+    @IBOutlet var scrollView: UIScrollView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        // Create the 3 main view controllers
-        var receiveViewController = ReceiveViewController(),
-            sendViewController = SendTableViewController(),
-            profileViewController = ProfileViewController()
         
         receiveViewController.view.backgroundColor = Utilities.baseColor()
         sendViewController.view.backgroundColor = Utilities.baseColor()
@@ -54,7 +54,16 @@ class ContainerViewController: UIViewController {
         self.scrollView!.setContentOffset(CGPoint(x: receiveFrame.width, y: 0), animated: false)
         self.view.backgroundColor = Utilities.baseColor()
     }
-
+    
+    func scrollViewDidScroll(scrollView: UIScrollView!) {
+        let pageWidth = scrollView!.frame.size.width,
+            calculatedScrollPage = Int(floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1)
+        if curScrollPage != calculatedScrollPage {
+            curScrollPage = calculatedScrollPage
+//            sendViewController.closeSelectedCell()
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

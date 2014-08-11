@@ -20,24 +20,35 @@ class SendInitiatorTableViewCell: UITableViewCell, UITextFieldDelegate {
     var closeButton = CloseButton(),
         delegate: SendInitiatorCellDelegate?
     
-    @IBAction func sendButton(sender: AnyObject) {
-        println("Send")
-        
+    @IBOutlet weak var sendButtonHighlight: UIView!
+    var sendButtonHighlightIsLeft: Bool = false
+
     
+    @IBAction func sendButton(sender: AnyObject) {
+        toggleSendButtonHightlight()
     }
     
     @IBAction func requestButton(sender: AnyObject) {
-        println("Request")
+        toggleSendButtonHightlight()
+    }
+    
+    func toggleSendButtonHightlight() {
+        
+        let x: CGFloat = sendButtonHighlightIsLeft ? self.sendButtonHighlight.frame.size.width : 0,
+            y = self.sendButtonHighlight.frame.origin.y,
+            width = self.sendButtonHighlight.frame.size.width,
+            height = self.sendButtonHighlight.frame.size.height
+        
+        UIView.animateWithDuration(0.3, animations: {
+            self.sendButtonHighlight.frame = CGRectMake(x, y, width, height)
+            }, completion: {
+                finished in
+                self.sendButtonHighlightIsLeft = !self.sendButtonHighlightIsLeft
+        })
     }
     
     @IBAction func doneButton(sender: AnyObject) {
         println("done")
-    }
-    
-    var cellHeight: CGFloat {
-    get {
-        return self.bounds.height
-    }
     }
     
     override func awakeFromNib() {
@@ -58,9 +69,7 @@ class SendInitiatorTableViewCell: UITableViewCell, UITextFieldDelegate {
     }
     
     func closeBtnPress() {
-        if delegate != nil {
-            delegate?.closeCell(self)
-        }
+        delegate?.closeCell(self)
     }
     
     func close() {
@@ -88,8 +97,7 @@ class SendInitiatorTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     func textField(textField: UITextField!, shouldChangeCharactersInRange range: NSRange, replacementString string: String!) -> Bool {
         let text: String = textField.text
-        println(textField.text)
-        if countElements(text) == 0 {
+        if textField.tag == 100 && countElements(text) == 0 {
             textField.text = "฿" + string
             
             return false

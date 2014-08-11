@@ -10,8 +10,11 @@ import UIKit
 
 class SendTableViewController: UITableViewController, SendInitiatorCellDelegate {
     
+    let NAVBAR_HEIGHT: CGFloat = 44,
+        STATUSBAR_HEIGHT: CGFloat = 20
+    
     let sections = ["Nearby", "Recent", "Favorites"],
-    sendItems = ["Search", "Wesley V", "John S", "Jordan K",
+    sendItems = ["Wesley V", "John S", "Jordan K",
         "Andrew D", "Jessica L", "Mom", "Jake O", "Jeff B", "Zach W",
         "Peter P"]
     
@@ -22,22 +25,31 @@ class SendTableViewController: UITableViewController, SendInitiatorCellDelegate 
         return selectedIndex != nil && selectedIndex == cellIndex ? true : false
     }
     
-    func calcTopOffsetToCell(indexPath: NSIndexPath) -> Int {
-        return 65 * indexPath.row;
+    func calcTopOffsetToCell(indexPath: NSIndexPath) -> CGFloat {
+        return CGFloat(65 * indexPath.row);
     }
     
     func closeCell(cell: SendInitiatorTableViewCell) {
-        let indexPath = tableView.indexPathForCell(cell as UITableViewCell)
-        closeInitiatorCell(cell, indexPath: indexPath)
+        closeInitiatorCell(cell, indexPath: selectedIndex!)
+    }
+    
+    func closeSelectedCell() {
+        if selectedIndex != nil {
+            let cell = self.tableView.cellForRowAtIndexPath(selectedIndex) as SendInitiatorTableViewCell
+            closeInitiatorCell(cell, indexPath: selectedIndex!)
+        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let sendInitiatorCellNib = UINib(nibName: "SendInitiatorTableViewCell", bundle: nil),
-            searchCellNib = UINib(nibName: "SearchTableViewCell", bundle: nil)
+        self.tableView.frame = CGRectMake(self.view.frame.origin.x, NAVBAR_HEIGHT, self.view.frame.size.width, UIScreen.mainScreen().bounds.height - NAVBAR_HEIGHT - STATUSBAR_HEIGHT)
+        
+        let sendInitiatorCellNib = UINib(nibName: "SendInitiatorTableViewCell", bundle: nil)
         tableView.registerNib(sendInitiatorCellNib, forCellReuseIdentifier: "sendInitiatorCell")
-        tableView.registerNib(searchCellNib, forCellReuseIdentifier: "searchCell")
         tableView.backgroundColor = Utilities.baseColor()
         tableView.separatorColor = UIColor.clearColor()
     }
@@ -58,25 +70,24 @@ class SendTableViewController: UITableViewController, SendInitiatorCellDelegate 
 
     
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+        var cell = self.tableView!.dequeueReusableCellWithIdentifier("sendInitiatorCell") as SendInitiatorTableViewCell
         
-        if (indexPath.row == 0) {
-            var cell = self.tableView!.dequeueReusableCellWithIdentifier("searchCell") as SearchTableViewCell
-            
-            return cell
-        } else {
-            var cell = self.tableView!.dequeueReusableCellWithIdentifier("sendInitiatorCell") as SendInitiatorTableViewCell
-            
-            cell.setUsername(sendItems[indexPath.row])
-            cell.setColor(Utilities.getColorForRow(indexPath.row))
-            cell.delegate = self
-            
-            return cell
-        }
+        cell.setUsername(sendItems[indexPath.row])
+        cell.setColor(Utilities.getColorForRow(indexPath.row))
+        cell.delegate = self
+        
+        return cell
     }
     
     func closeInitiatorCell(cell: SendInitiatorTableViewCell, indexPath: NSIndexPath) {
+        
+        let x = self.tableView.frame.origin.x,
+            y: CGFloat = NAVBAR_HEIGHT,
+            width = self.tableView.frame.size.width,
+            height = tableView.frame.size.height - 400 - NAVBAR_HEIGHT - STATUSBAR_HEIGHT
+        
         UIView.animateWithDuration(0.3, animations: {
-            self.tableView.frame = CGRectMake(self.tableView.frame.origin.x, 0, self.tableView.frame.width, UIScreen.mainScreen().bounds.size.height - 20)
+            self.tableView.frame = CGRectMake(x, y, width, height)
         })
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
@@ -92,9 +103,13 @@ class SendTableViewController: UITableViewController, SendInitiatorCellDelegate 
     func openInitiatorCell(cell: SendInitiatorTableViewCell, indexPath: NSIndexPath) {
         tableView.scrollEnabled = false
         
-        // Select keyboard
+        let x = self.tableView.frame.origin.x,
+            y: CGFloat = 0 - (self.calcTopOffsetToCell(indexPath)),
+            width = self.tableView.frame.size.width,
+            height = tableView.frame.size.height + 400 + STATUSBAR_HEIGHT + NAVBAR_HEIGHT
+        
         UIView.animateWithDuration(0.3, animations: {
-            self.tableView.frame = CGRectMake(self.tableView.frame.origin.x, 0 - CGFloat(self.calcTopOffsetToCell(indexPath) - 20), self.tableView.frame.size.width, self.tableView.frame.size.height + 190)
+            self.tableView.frame = CGRectMake(x, y, width, height)
         })
         
         selectedIndex = indexPath
@@ -121,8 +136,6 @@ class SendTableViewController: UITableViewController, SendInitiatorCellDelegate 
     override func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
         if cellIsSelected(indexPath) {
             return 335
-        } else if (indexPath.row == 0) {
-            return 44
         }
         
         return 65
