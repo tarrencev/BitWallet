@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1319605E19997281006368B2 /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1319605D19997281006368B2 /* SendViewController.swift */; };
 		13196062199980DB006368B2 /* SendNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13196061199980DB006368B2 /* SendNavViewController.swift */; };
+		1319606A1999CA38006368B2 /* SendSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131960691999CA38006368B2 /* SendSectionHeaderView.swift */; };
 		133EA7BE1993263100BCA19E /* SendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133EA7BD1993263100BCA19E /* SendTableViewController.swift */; };
 		133EA7C91994626100BCA19E /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133EA7C81994626100BCA19E /* CloseButton.swift */; };
 		1345C808198EC476004A50C5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345C806198EC476004A50C5 /* ProfileViewController.swift */; };
@@ -43,6 +44,7 @@
 		11352C2DEFCE4F75A2B60D4F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		1319605D19997281006368B2 /* SendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		13196061199980DB006368B2 /* SendNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendNavViewController.swift; sourceTree = "<group>"; };
+		131960691999CA38006368B2 /* SendSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendSectionHeaderView.swift; sourceTree = "<group>"; };
 		133EA7BD1993263100BCA19E /* SendTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendTableViewController.swift; sourceTree = "<group>"; };
 		133EA7C81994626100BCA19E /* CloseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		1345C806198EC476004A50C5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				13BDA5A1198F18F8009A1337 /* SendInitiatorTableViewCell.swift */,
 				13BDA5A2198F18F8009A1337 /* SendInitiatorTableViewCell.xib */,
 				13196061199980DB006368B2 /* SendNavViewController.swift */,
+				131960691999CA38006368B2 /* SendSectionHeaderView.swift */,
 			);
 			name = Send;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				1345C80C198EC4B4004A50C5 /* ReceiveViewController.swift in Sources */,
 				1345C808198EC476004A50C5 /* ProfileViewController.swift in Sources */,
 				133EA7C91994626100BCA19E /* CloseButton.swift in Sources */,
+				1319606A1999CA38006368B2 /* SendSectionHeaderView.swift in Sources */,
 				1345C810198ECBA6004A50C5 /* SetupViewController.swift in Sources */,
 				1319605E19997281006368B2 /* SendViewController.swift in Sources */,
 				1361A2CF198EC3C3004CABAD /* AppDelegate.swift in Sources */,

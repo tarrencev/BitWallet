@@ -31,5 +31,10 @@ class SendViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func viewIsScrollingOffScreen() {
+        sendTableViewController.closeSelectedCell()
+        sendNavViewController.closeSearch()
+    }
 
 }

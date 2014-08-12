@@ -42,7 +42,6 @@ class SendNavViewController: UIViewController, UITextFieldDelegate {
     }
     
     func closeSearch() {
-        println("close")
         searchTextField.resignFirstResponder()
         searchTextField.text = ""
     }

@@ -60,7 +60,7 @@ class ContainerViewController: UIViewController, UIScrollViewDelegate {
             calculatedScrollPage = Int(floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1)
         if curScrollPage != calculatedScrollPage {
             curScrollPage = calculatedScrollPage
-//            sendViewController.closeSelectedCell()
+            sendViewController.viewIsScrollingOffScreen()
         }
     }
     

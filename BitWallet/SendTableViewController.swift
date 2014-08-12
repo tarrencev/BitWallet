@@ -11,22 +11,30 @@ import UIKit
 class SendTableViewController: UITableViewController, SendInitiatorCellDelegate {
     
     let NAVBAR_HEIGHT: CGFloat = 44,
-        STATUSBAR_HEIGHT: CGFloat = 20
+        STATUSBAR_HEIGHT: CGFloat = 20,
+        SECTION_HEADER_HEIGHT: CGFloat = 30,
+        ROW_CELL_HEIGHT: CGFloat = 65,
+        TABLEVIEW_SCROLL_ANIMATION_DURATION: Double = 0.3
     
     let sections = ["Nearby", "Recent", "Favorites"],
-    sendItems = ["Wesley V", "John S", "Jordan K",
-        "Andrew D", "Jessica L", "Mom", "Jake O", "Jeff B", "Zach W",
-        "Peter P"]
+        sectionValues = [["Wesley V", "John S"], ["Jordan Kohl", "Andrew Drozdov", "Jessica Love", "Mom"],   ["Jake Oberon", "Maximus Decimus Meridius", "Russ Darrow",
+        "Peter Pan"]]
     
-    
-    var selectedIndex: NSIndexPath?
+    var selectedIndex: NSIndexPath?,
+        closeTableViewRect: CGRect?
     
     func cellIsSelected(cellIndex: NSIndexPath) -> Bool {
         return selectedIndex != nil && selectedIndex == cellIndex ? true : false
     }
     
     func calcTopOffsetToCell(indexPath: NSIndexPath) -> CGFloat {
-        return CGFloat(65 * indexPath.row);
+        var rowsHeight: CGFloat = ROW_CELL_HEIGHT * CGFloat(indexPath.row) + SECTION_HEADER_HEIGHT * CGFloat(indexPath.section)
+        
+        for var index = 0; index < indexPath.section; index++ {
+            rowsHeight += CGFloat(sectionValues[index].count) * ROW_CELL_HEIGHT
+        }
+        
+        return rowsHeight + SECTION_HEADER_HEIGHT;
     }
     
     func closeCell(cell: SendInitiatorTableViewCell) {
@@ -38,9 +46,6 @@ class SendTableViewController: UITableViewController, SendInitiatorCellDelegate 
             let cell = self.tableView.cellForRowAtIndexPath(selectedIndex) as SendInitiatorTableViewCell
             closeInitiatorCell(cell, indexPath: selectedIndex!)
         }
-    }
-    
-    override func viewWillAppear(animated: Bool) {
     }
 
     override func viewDidLoad() {
@@ -61,19 +66,40 @@ class SendTableViewController: UITableViewController, SendInitiatorCellDelegate 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
-        return 1
+        return self.sections.count
+    }
+    
+    override func tableView(tableView: UITableView!, heightForHeaderInSection section: Int) -> CGFloat {
+        return SECTION_HEADER_HEIGHT
+    }
+    
+    override func tableView(tableView: UITableView!, viewForHeaderInSection section: Int) -> UIView! {
+        var sendSectionHeaderView = SendSectionHeaderView(frame: CGRectMake(0, 0, tableView.frame.size.width, SECTION_HEADER_HEIGHT))
+        
+        let sectionName = sections[section]
+        sendSectionHeaderView.setSectionTitle(sectionName)
+        
+        return sendSectionHeaderView as UIView
     }
 
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        return self.sendItems.count
+        let rowsInSection = sectionValues[section].count
+        return rowsInSection
     }
 
     
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        var cell = self.tableView!.dequeueReusableCellWithIdentifier("sendInitiatorCell") as SendInitiatorTableViewCell
+        let cell = self.tableView!.dequeueReusableCellWithIdentifier("sendInitiatorCell") as SendInitiatorTableViewCell,
+            username = sectionValues[indexPath.section][indexPath.row]
         
-        cell.setUsername(sendItems[indexPath.row])
-        cell.setColor(Utilities.getColorForRow(indexPath.row))
+        var cellAbsoluteRowIndex = indexPath.row
+        
+        for var index = 0; index < indexPath.section; index++ {
+            cellAbsoluteRowIndex += sectionValues[index].count
+        }
+        
+        cell.setUsername(username)
+        cell.setColor(Utilities.getColorForIndex(cellAbsoluteRowIndex))
         cell.delegate = self
         
         return cell
@@ -81,47 +107,44 @@ class SendTableViewController: UITableViewController, SendInitiatorCellDelegate 
     
     func closeInitiatorCell(cell: SendInitiatorTableViewCell, indexPath: NSIndexPath) {
         
-        let x = self.tableView.frame.origin.x,
-            y: CGFloat = NAVBAR_HEIGHT,
-            width = self.tableView.frame.size.width,
-            height = tableView.frame.size.height - 400 - NAVBAR_HEIGHT - STATUSBAR_HEIGHT
-        
-        UIView.animateWithDuration(0.3, animations: {
-            self.tableView.frame = CGRectMake(x, y, width, height)
+        UIView.animateWithDuration(TABLEVIEW_SCROLL_ANIMATION_DURATION, animations: {
+            self.tableView.frame = self.closeTableViewRect! //CGRectMake(x, y, width, height)
         })
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         selectedIndex = nil
         cell.close()
-
-        tableView.scrollEnabled = true
         
         tableView.beginUpdates()
         tableView.endUpdates()
+        
+        tableView.scrollEnabled = true
     }
     
     func openInitiatorCell(cell: SendInitiatorTableViewCell, indexPath: NSIndexPath) {
+        closeTableViewRect = tableView.frame
         tableView.scrollEnabled = false
         
-        let x = self.tableView.frame.origin.x,
-            y: CGFloat = 0 - (self.calcTopOffsetToCell(indexPath)),
-            width = self.tableView.frame.size.width,
-            height = tableView.frame.size.height + 400 + STATUSBAR_HEIGHT + NAVBAR_HEIGHT
+        let x = tableView.frame.origin.x,
+            y: CGFloat = 0 - calcTopOffsetToCell(indexPath),
+            width = tableView.frame.size.width,
+            height = tableView.frame.size.height + 335 + 190
         
-        UIView.animateWithDuration(0.3, animations: {
+        UIView.animateWithDuration(TABLEVIEW_SCROLL_ANIMATION_DURATION, animations: {
             self.tableView.frame = CGRectMake(x, y, width, height)
         })
-        
+
         selectedIndex = indexPath
         cell.open()
-
+        
         tableView.beginUpdates()
         tableView.endUpdates()
+        
+
     }
     
     override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as SendInitiatorTableViewCell,
-            notificationCenter = NSNotificationCenter.defaultCenter()
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as SendInitiatorTableViewCell
         
         // Selected the same cell again so collapse it
         if selectedIndex == indexPath {
