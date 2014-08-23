@@ -8,9 +8,7 @@
 
 import UIKit
 
-//let colors = [0x8E44AD, 0x2C3E50, 0xF1C40F, 0xF39C12, 0xC0392B]
-let colors = [0xFFFFFF]
-
+let colors = [0x8E44AD, 0x2C3E50, 0xF1C40F, 0xF39C12, 0xC0392B]
 
 class Utilities: NSObject {
     

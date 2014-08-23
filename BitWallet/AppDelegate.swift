@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
 //        UserInfoManager.resetKeyManager()
+        Chain.sharedInstanceWithToken("acce3458d446f7e9468a7391e566b790")
         
         return true
     }

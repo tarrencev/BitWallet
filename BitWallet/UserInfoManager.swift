@@ -15,7 +15,7 @@ class UserInfoManager: NSObject {
     class func createUserAccount(username: String) {
         let beaconUUID = NSUUID.UUID().UUIDString
 //        let keyChainItem = CTKeychainItem(service: KEYCHAIN_SERVICE, account: username)
-        let privateKey = generatePrivateKey()
+//        let privateKey = generatePrivateKey()
         
         NSUserDefaults.standardUserDefaults().setObject(username, forKey:"Username")
         NSUserDefaults.standardUserDefaults().setObject(beaconUUID, forKey:"BeaconUUID")
@@ -23,8 +23,16 @@ class UserInfoManager: NSObject {
         
     }
     
-    class func generatePrivateKey() -> String {
-        return "12312312413"
+//    class func generatePrivateKey() -> String {
+//        return "Ky4HBwEz6dMtLaxmGdLNp4rjzsdaUmHf9aUsHjai6j8sbgDwgsQQ"
+//    }
+    
+    class func getPrivateKey() -> String {
+        return "Ky4HBwEz6dMtLaxmGdLNp4rjzsdaUmHf9aUsHjai6j8sbgDwgsQQ"
+    }
+    
+    class func getPublicAddress() -> String {
+        return "17qHdTwxQCkKs3GX56mUzjBrYKEpvbNaPX"
     }
     
     class func getUsername() -> String? {

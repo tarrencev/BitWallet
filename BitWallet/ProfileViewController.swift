@@ -9,11 +9,15 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    
+    private var transactionsTableViewController = TransactionsTableViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        self.addChildViewController(transactionsTableViewController)
+        self.view.addSubview(transactionsTableViewController.view)
+        transactionsTableViewController.didMoveToParentViewController(self)
     }
 
     override func didReceiveMemoryWarning() {

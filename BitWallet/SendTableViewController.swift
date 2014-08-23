@@ -56,8 +56,8 @@ class SendTableViewController: UITableViewController, SendInitiatorCellDelegate 
         let sendInitiatorCellNib = UINib(nibName: "SendInitiatorTableViewCell", bundle: nil)
         tableView.registerNib(sendInitiatorCellNib, forCellReuseIdentifier: "sendInitiatorCell")
         tableView.backgroundColor = Utilities.baseColor()
-        tableView.separatorInset = UIEdgeInsetsZero
-//        tableView.separatorColor = UIColor.clearColor()
+//        tableView.separatorInset = UIEdgeInsetsZero
+        tableView.separatorColor = UIColor.clearColor()
     }
 
     override func didReceiveMemoryWarning() {
@@ -90,7 +90,7 @@ class SendTableViewController: UITableViewController, SendInitiatorCellDelegate 
 
     
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        let cell = self.tableView!.dequeueReusableCellWithIdentifier("sendInitiatorCell") as SendInitiatorTableViewCell,
+        let cell = tableView.dequeueReusableCellWithIdentifier("sendInitiatorCell") as SendInitiatorTableViewCell,
             username = sectionValues[indexPath.section][indexPath.row]
         
         var cellAbsoluteRowIndex = indexPath.row
