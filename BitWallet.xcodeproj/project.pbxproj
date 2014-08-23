@@ -27,6 +27,13 @@
 		1361A2E2198EC3C4004CABAD /* BitWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1361A2E1198EC3C4004CABAD /* BitWalletTests.swift */; };
 		13BDA5A3198F18F8009A1337 /* SendInitiatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BDA5A1198F18F8009A1337 /* SendInitiatorTableViewCell.swift */; };
 		13BDA5A4198F18F8009A1337 /* SendInitiatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13BDA5A2198F18F8009A1337 /* SendInitiatorTableViewCell.xib */; };
+		13FAE3A6199D9B8400107512 /* nearby.png in Resources */ = {isa = PBXBuildFile; fileRef = 13FAE3A0199D9B8400107512 /* nearby.png */; };
+		13FAE3A7199D9B8400107512 /* nearby@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13FAE3A1199D9B8400107512 /* nearby@2x.png */; };
+		13FAE3A8199D9B8400107512 /* qr_code.png in Resources */ = {isa = PBXBuildFile; fileRef = 13FAE3A2199D9B8400107512 /* qr_code.png */; };
+		13FAE3A9199D9B8400107512 /* qr_code@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13FAE3A3199D9B8400107512 /* qr_code@2x.png */; };
+		13FAE3B0199DA02000107512 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 13FAE3AE199DA02000107512 /* search.png */; };
+		13FAE3B1199DA02000107512 /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13FAE3AF199DA02000107512 /* search@2x.png */; };
+		13FAE3B7199E5C1100107512 /* TransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FAE3B6199E5C1100107512 /* TransactionsTableViewController.swift */; };
 		187E16A05675405CAD606ABD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3F6887541E49CC9F7B2407 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +74,13 @@
 		13BDA59A198F06DB009A1337 /* BitWallet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BitWallet-Bridging-Header.h"; sourceTree = "<group>"; };
 		13BDA5A1198F18F8009A1337 /* SendInitiatorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendInitiatorTableViewCell.swift; sourceTree = "<group>"; };
 		13BDA5A2198F18F8009A1337 /* SendInitiatorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendInitiatorTableViewCell.xib; sourceTree = "<group>"; };
+		13FAE3A0199D9B8400107512 /* nearby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nearby.png; sourceTree = "<group>"; };
+		13FAE3A1199D9B8400107512 /* nearby@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nearby@2x.png"; sourceTree = "<group>"; };
+		13FAE3A2199D9B8400107512 /* qr_code.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qr_code.png; sourceTree = "<group>"; };
+		13FAE3A3199D9B8400107512 /* qr_code@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qr_code@2x.png"; sourceTree = "<group>"; };
+		13FAE3AE199DA02000107512 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		13FAE3AF199DA02000107512 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
+		13FAE3B6199E5C1100107512 /* TransactionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewController.swift; sourceTree = "<group>"; };
 		BF3F6887541E49CC9F7B2407 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -99,6 +113,7 @@
 		1345C81B198ECBD7004A50C5 /* Send */ = {
 			isa = PBXGroup;
 			children = (
+				13FAE39D199D9B7800107512 /* Icons */,
 				1319605D19997281006368B2 /* SendViewController.swift */,
 				133EA7BD1993263100BCA19E /* SendTableViewController.swift */,
 				13BDA5A1198F18F8009A1337 /* SendInitiatorTableViewCell.swift */,
@@ -115,6 +130,7 @@
 				1345C806198EC476004A50C5 /* ProfileViewController.swift */,
 				1345C807198EC476004A50C5 /* ProfileViewController.xib */,
 				1345C80E198ECBA5004A50C5 /* SetupViewController.swift */,
+				13FAE3B6199E5C1100107512 /* TransactionsTableViewController.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -192,6 +208,19 @@
 				1361A2E0198EC3C4004CABAD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13FAE39D199D9B7800107512 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				13FAE3AE199DA02000107512 /* search.png */,
+				13FAE3AF199DA02000107512 /* search@2x.png */,
+				13FAE3A0199D9B8400107512 /* nearby.png */,
+				13FAE3A1199D9B8400107512 /* nearby@2x.png */,
+				13FAE3A2199D9B8400107512 /* qr_code.png */,
+				13FAE3A3199D9B8400107512 /* qr_code@2x.png */,
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 		6981BF1A53C44B669FD4CCAB /* Frameworks */ = {
@@ -285,9 +314,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1345C80D198EC4B4004A50C5 /* ReceiveViewController.xib in Resources */,
+				13FAE3A9199D9B8400107512 /* qr_code@2x.png in Resources */,
+				13FAE3B1199DA02000107512 /* search@2x.png in Resources */,
+				13FAE3B0199DA02000107512 /* search.png in Resources */,
+				13FAE3A8199D9B8400107512 /* qr_code.png in Resources */,
 				1361A2D4198EC3C3004CABAD /* Main.storyboard in Resources */,
 				1345C809198EC476004A50C5 /* ProfileViewController.xib in Resources */,
 				1361A2D6198EC3C3004CABAD /* Images.xcassets in Resources */,
+				13FAE3A6199D9B8400107512 /* nearby.png in Resources */,
+				13FAE3A7199D9B8400107512 /* nearby@2x.png in Resources */,
 				13BDA5A4198F18F8009A1337 /* SendInitiatorTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +379,7 @@
 				1361A2D1198EC3C3004CABAD /* ContainerViewController.swift in Sources */,
 				13196062199980DB006368B2 /* SendNavViewController.swift in Sources */,
 				1345C80C198EC4B4004A50C5 /* ReceiveViewController.swift in Sources */,
+				13FAE3B7199E5C1100107512 /* TransactionsTableViewController.swift in Sources */,
 				1345C808198EC476004A50C5 /* ProfileViewController.swift in Sources */,
 				133EA7C91994626100BCA19E /* CloseButton.swift in Sources */,
 				1319606A1999CA38006368B2 /* SendSectionHeaderView.swift in Sources */,

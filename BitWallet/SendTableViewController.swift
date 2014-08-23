@@ -56,7 +56,8 @@ class SendTableViewController: UITableViewController, SendInitiatorCellDelegate 
         let sendInitiatorCellNib = UINib(nibName: "SendInitiatorTableViewCell", bundle: nil)
         tableView.registerNib(sendInitiatorCellNib, forCellReuseIdentifier: "sendInitiatorCell")
         tableView.backgroundColor = Utilities.baseColor()
-        tableView.separatorColor = UIColor.clearColor()
+        tableView.separatorInset = UIEdgeInsetsZero
+//        tableView.separatorColor = UIColor.clearColor()
     }
 
     override func didReceiveMemoryWarning() {
