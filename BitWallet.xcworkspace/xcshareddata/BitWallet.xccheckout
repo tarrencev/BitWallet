@@ -14,6 +14,8 @@
 		<string>github.com:FahimF/SQLiteDB.git</string>
 		<key>9C8399ACD3F930D0A720B3BFAF1B5025F7E02353</key>
 		<string>ssh://github.com/tarrence13/BitWallet.git</string>
+		<key>AA612C451D6B79DFA33E18667F890F2728E039C6</key>
+		<string>github.com:ryanfowler/SwiftData.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>BitWallet.xcworkspace</string>
@@ -23,6 +25,8 @@
 		<string>../BitWallet/SQLiteDB</string>
 		<key>9C8399ACD3F930D0A720B3BFAF1B5025F7E02353</key>
 		<string>..</string>
+		<key>AA612C451D6B79DFA33E18667F890F2728E039C6</key>
+		<string>../BitWallet/SwiftData</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/tarrence13/BitWallet.git</string>
@@ -47,6 +51,14 @@
 			<string>2CEAEAA908B469CE9CCCDB1039DB2B0AEEA5CDA4</string>
 			<key>IDESourceControlWCCName</key>
 			<string>SQLiteDB</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AA612C451D6B79DFA33E18667F890F2728E039C6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SwiftData</string>
 		</dict>
 	</array>
 </dict>

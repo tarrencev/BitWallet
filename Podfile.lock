@@ -1,10 +1,20 @@
 PODS:
   - Chain (0.1.15)
+  - CoreBitcoin (0.3.0):
+    - OpenSSL-Universal (= 1.0.1.h)
+  - OpenSSL-Universal (1.0.1.h)
 
 DEPENDENCIES:
   - Chain (= 0.1.15)
+  - CoreBitcoin (from `https://raw.github.com/oleganza/CoreBitcoin/master/CoreBitcoin.podspec`)
+
+EXTERNAL SOURCES:
+  CoreBitcoin:
+    :podspec: https://raw.github.com/oleganza/CoreBitcoin/master/CoreBitcoin.podspec
 
 SPEC CHECKSUMS:
   Chain: 19c03d82dc5dd1dc9c9b6dd7ab1c425d927b2857
+  CoreBitcoin: 351ea65d3e4f3f6fd7f01303fb23c333fd714121
+  OpenSSL-Universal: 9c112508615ed33bb35f730eed820e93175a9dec
 
 COCOAPODS: 0.33.1

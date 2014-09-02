@@ -3,3 +3,5 @@
 //
 
 #import "Chain.h"
+#import <CoreBitcoin/CoreBitcoin.h>
+#import "sqlite3.h"

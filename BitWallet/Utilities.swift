@@ -10,7 +10,7 @@ import UIKit
 
 let colors = [0x8E44AD, 0x2C3E50, 0xF1C40F, 0xF39C12, 0xC0392B]
 
-class Utilities: NSObject {
+class Utilities {
     
     class func colorize (hex: Int, alpha: Double = 1.0) -> UIColor {
         let red = Double((hex & 0xFF0000) >> 16) / 255.0,

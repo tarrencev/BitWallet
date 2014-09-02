@@ -11,7 +11,7 @@ import Security
 
 let KEYCHAIN_SERVICE: String =  "BitWallet"
 
-class UserInfoManager: NSObject {
+class UserInfoManager {
     class func createUserAccount(username: String) {
         let beaconUUID = NSUUID.UUID().UUIDString
 //        let keyChainItem = CTKeychainItem(service: KEYCHAIN_SERVICE, account: username)

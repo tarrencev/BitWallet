@@ -9,16 +9,30 @@
 import UIKit
 
 class TransactionsTableViewController: UITableViewController {
-
+    
+    var transactions: Array<Transaction> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        Chain.getAddress(UserInfoManager.getPublicAddress(), )
-        
+        let sendInitiatorCellNib = UINib(nibName: "TransactionsTableViewCell", bundle: nil)
+        tableView.registerNib(sendInitiatorCellNib, forCellReuseIdentifier: "transactionsCell")
 
-        Chain.sharedInstance().getAddressTransactions(UserInfoManager.getPublicAddress(), completionHandler: { (response, error) -> Void in
-            println(response)
-            println(error)
+        Chain.sharedInstance().getAddressTransactions(UserInfoManager.getPublicAddress(), limit: 2, completionHandler: { (response, error) -> Void in
+            
+            if response != nil {
+                let responseDictionary = response as NSDictionary,
+                    resultsArray = responseDictionary["results"] as Array<NSDictionary>
+                
+                for transactionData in resultsArray {
+                    let transaction = Transaction(rawData: transactionData)
+                    self.transactions.append(transaction)
+                }
+                
+                self.tableView.reloadData()
+            } else {
+                println(error)
+            }
         })
     }
 
@@ -30,18 +44,26 @@ class TransactionsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return transactions.count
     }
 
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         let cell = tableView.dequeueReusableCellWithIdentifier("transactionsCell", forIndexPath: indexPath) as TransactionsTableViewCell
 
-        // Configure the cell...
+        let transaction = transactions[indexPath.row],
+            addresses = transaction.amount
+        
+            cell.setUser(transaction.outputs[0].addresses[0])
+            cell.setAmount(String(transaction.amount))
 
         return cell
+    }
+    
+    override func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+        return 65
     }
 }

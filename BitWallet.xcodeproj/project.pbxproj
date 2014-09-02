@@ -36,6 +36,13 @@
 		187E16A05675405CAD606ABD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3F6887541E49CC9F7B2407 /* libPods.a */; };
 		2573AB5919A93AFA006D3770 /* TransactionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2573AB5719A93AFA006D3770 /* TransactionsTableViewCell.swift */; };
 		2573AB5A19A93AFA006D3770 /* TransactionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2573AB5819A93AFA006D3770 /* TransactionsTableViewCell.xib */; };
+		25CF50ED19AAC197004B99DF /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CF50EC19AAC197004B99DF /* KeyManager.swift */; };
+		25CF50F619AD5E41004B99DF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CF50F519AD5E41004B99DF /* libsqlite3.dylib */; };
+		25CF50F819AD9242004B99DF /* NSData+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CF50F719AD9242004B99DF /* NSData+HexString.swift */; };
+		25CF50FD19AF7BEB004B99DF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 25CF50FA19AF7BEB004B99DF /* LICENSE */; };
+		25CF50FE19AF7BEB004B99DF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 25CF50FB19AF7BEB004B99DF /* README.md */; };
+		25CF50FF19AF7BEB004B99DF /* SwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CF50FC19AF7BEB004B99DF /* SwiftData.swift */; };
+		25F5863519A982870077EB93 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F5863419A982870077EB93 /* TransactionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +90,13 @@
 		13FAE3B6199E5C1100107512 /* TransactionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewController.swift; sourceTree = "<group>"; };
 		2573AB5719A93AFA006D3770 /* TransactionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewCell.swift; sourceTree = "<group>"; };
 		2573AB5819A93AFA006D3770 /* TransactionsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionsTableViewCell.xib; sourceTree = "<group>"; };
+		25CF50EC19AAC197004B99DF /* KeyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
+		25CF50F519AD5E41004B99DF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		25CF50F719AD9242004B99DF /* NSData+HexString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+HexString.swift"; sourceTree = "<group>"; };
+		25CF50FA19AF7BEB004B99DF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		25CF50FB19AF7BEB004B99DF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		25CF50FC19AF7BEB004B99DF /* SwiftData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftData.swift; sourceTree = "<group>"; };
+		25F5863419A982870077EB93 /* TransactionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		BF3F6887541E49CC9F7B2407 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25CF50F619AD5E41004B99DF /* libsqlite3.dylib in Frameworks */,
 				187E16A05675405CAD606ABD /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,6 +148,7 @@
 				13FAE3B6199E5C1100107512 /* TransactionsTableViewController.swift */,
 				2573AB5719A93AFA006D3770 /* TransactionsTableViewCell.swift */,
 				2573AB5819A93AFA006D3770 /* TransactionsTableViewCell.xib */,
+				25F5863419A982870077EB93 /* TransactionModel.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -176,8 +192,8 @@
 				1345C81B198ECBD7004A50C5 /* Send */,
 				2573AB4919A93711006D3770 /* Utils */,
 				2573AB4B19A9375C006D3770 /* Libraries */,
-				1345C80E198ECBA5004A50C5 /* SetupViewController.swift */,
 				1345C81E198EE173004A50C5 /* InitialViewController.swift */,
+				1345C80E198ECBA5004A50C5 /* SetupViewController.swift */,
 				1361A2D0198EC3C3004CABAD /* ContainerViewController.swift */,
 				1361A2CE198EC3C3004CABAD /* AppDelegate.swift */,
 				1361A2D2198EC3C3004CABAD /* Main.storyboard */,
@@ -231,6 +247,7 @@
 			children = (
 				1345C824198EF44A004A50C5 /* Utilities.swift */,
 				1345C819198ECBD0004A50C5 /* UserInfoManager.swift */,
+				25CF50EC19AAC197004B99DF /* KeyManager.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -246,13 +263,26 @@
 		2573AB4B19A9375C006D3770 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				25CF50F919AF7BEB004B99DF /* SwiftData */,
+				25CF50F719AD9242004B99DF /* NSData+HexString.swift */,
 			);
 			name = Libraries;
+			sourceTree = "<group>";
+		};
+		25CF50F919AF7BEB004B99DF /* SwiftData */ = {
+			isa = PBXGroup;
+			children = (
+				25CF50FA19AF7BEB004B99DF /* LICENSE */,
+				25CF50FB19AF7BEB004B99DF /* README.md */,
+				25CF50FC19AF7BEB004B99DF /* SwiftData.swift */,
+			);
+			path = SwiftData;
 			sourceTree = "<group>";
 		};
 		6981BF1A53C44B669FD4CCAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				25CF50F519AD5E41004B99DF /* libsqlite3.dylib */,
 				BF3F6887541E49CC9F7B2407 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -313,6 +343,7 @@
 					};
 					1361A2DA198EC3C4004CABAD = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = UTHCV5V72H;
 						TestTargetID = 1361A2C8198EC3C3004CABAD;
 					};
 				};
@@ -347,6 +378,7 @@
 				13FAE3B0199DA02000107512 /* search.png in Resources */,
 				13FAE3A8199D9B8400107512 /* qr_code.png in Resources */,
 				1361A2D4198EC3C3004CABAD /* Main.storyboard in Resources */,
+				25CF50FD19AF7BEB004B99DF /* LICENSE in Resources */,
 				1361A2D6198EC3C3004CABAD /* Images.xcassets in Resources */,
 				13FAE3A6199D9B8400107512 /* nearby.png in Resources */,
 				2573AB5A19A93AFA006D3770 /* TransactionsTableViewCell.xib in Resources */,
@@ -404,11 +436,15 @@
 			files = (
 				1345C81A198ECBD0004A50C5 /* UserInfoManager.swift in Sources */,
 				13BDA5A3198F18F8009A1337 /* SendInitiatorTableViewCell.swift in Sources */,
+				25CF50FE19AF7BEB004B99DF /* README.md in Sources */,
+				25CF50F819AD9242004B99DF /* NSData+HexString.swift in Sources */,
 				1361A2D1198EC3C3004CABAD /* ContainerViewController.swift in Sources */,
 				13196062199980DB006368B2 /* SendNavViewController.swift in Sources */,
 				1345C80C198EC4B4004A50C5 /* ReceiveViewController.swift in Sources */,
+				25CF50ED19AAC197004B99DF /* KeyManager.swift in Sources */,
 				13FAE3B7199E5C1100107512 /* TransactionsTableViewController.swift in Sources */,
 				2573AB5919A93AFA006D3770 /* TransactionsTableViewCell.swift in Sources */,
+				25F5863519A982870077EB93 /* TransactionModel.swift in Sources */,
 				1345C808198EC476004A50C5 /* ProfileViewController.swift in Sources */,
 				133EA7C91994626100BCA19E /* CloseButton.swift in Sources */,
 				1319606A1999CA38006368B2 /* SendSectionHeaderView.swift in Sources */,
@@ -417,6 +453,7 @@
 				1361A2CF198EC3C3004CABAD /* AppDelegate.swift in Sources */,
 				1345C825198EF44A004A50C5 /* Utilities.swift in Sources */,
 				133EA7BE1993263100BCA19E /* SendTableViewController.swift in Sources */,
+				25CF50FF19AF7BEB004B99DF /* SwiftData.swift in Sources */,
 				1345C81F198EE173004A50C5 /* InitialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,10 +574,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BitWallet/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "BitWallet/BitWallet-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -554,10 +593,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BitWallet/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "BitWallet/BitWallet-Bridging-Header.h";
 			};
 			name = Release;
@@ -566,6 +607,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BitWallet.app/BitWallet";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -577,6 +620,7 @@
 				INFOPLIST_FILE = BitWalletTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -585,6 +629,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BitWallet.app/BitWallet";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -592,6 +638,7 @@
 				INFOPLIST_FILE = BitWalletTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;

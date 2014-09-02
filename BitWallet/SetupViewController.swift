@@ -17,6 +17,38 @@ class SetupViewController: UIViewController {
         self.performSegueWithIdentifier("setupComplete", sender: self.navigationController)
     }
     
+    @IBAction func keyBtnPress(sender: AnyObject) {
+        let button = sender as UIButton
+        
+        
+        switch (button.tag) {
+            case 201:
+                let keyName = "key1",
+                privateKey = KeyManager.getPrivateKey(keyName),
+                publicKey = KeyManager.getPublicKey(keyName)
+                println(privateKey)
+                println(publicKey)
+            
+            case 202:
+                let keyName = "key2",
+                privateKey = KeyManager.getPrivateKey(keyName),
+                publicKey = KeyManager.getPublicKey(keyName)
+                println(privateKey)
+                println(publicKey)
+            
+            case 203:
+                let keyName = "key3",
+                privateKey = KeyManager.getPrivateKey(keyName),
+                publicKey = KeyManager.getPublicKey(keyName)
+                println(privateKey)
+                println(publicKey)
+            
+            default:
+                println("ISSUE")
+                break;
+        }
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

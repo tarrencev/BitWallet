@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bDr-2k-I6C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="14A329f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bDr-2k-I6C">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
     </dependencies>
     <scenes>
         <!--Initial View Controller-->
@@ -41,7 +42,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXD-1N-tGv">
@@ -83,16 +84,16 @@
                         <viewControllerLayoutGuide type="bottom" id="pGB-aN-uHo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Usr-4V-LTP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HTL-FH-NCb">
-                                <rect key="frame" x="112" y="65" width="188" height="30"/>
+                                <rect key="frame" x="112" y="31" width="188" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbX-N1-XyF">
-                                <rect key="frame" x="47" y="69" width="51" height="21"/>
+                                <rect key="frame" x="47" y="35" width="51" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -104,6 +105,33 @@
                                 </state>
                                 <connections>
                                     <action selector="doneButton:" destination="S4K-KD-jqB" eventType="touchUpInside" id="5H8-Bu-e2K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="201" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOz-HN-Qcu">
+                                <rect key="frame" x="0.0" y="86" width="107" height="63"/>
+                                <state key="normal" title="Key 1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyBtnPress:" destination="S4K-KD-jqB" eventType="touchUpInside" id="OGd-aT-yzD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="202" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBQ-mz-v7P">
+                                <rect key="frame" x="107" y="86" width="106" height="63"/>
+                                <state key="normal" title="Key 2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyBtnPress:" destination="S4K-KD-jqB" eventType="touchUpInside" id="8nS-v3-taN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="203" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hK6-Jd-AW3">
+                                <rect key="frame" x="214" y="86" width="107" height="63"/>
+                                <state key="normal" title="Key 3">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyBtnPress:" destination="S4K-KD-jqB" eventType="touchUpInside" id="gFD-iI-B9f"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -124,6 +152,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BGz-jt-ZIa" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3055" y="449"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4DV-BP-Khf">
+            <objects>
+                <viewController id="HXi-vt-ie4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ecC-wD-lSk"/>
+                        <viewControllerLayoutGuide type="bottom" id="jQS-tl-Fd4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eLr-Dd-dNm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LuF-xd-kyA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3468" y="405"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SdX-KC-URT">
