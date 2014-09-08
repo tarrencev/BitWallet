@@ -45,7 +45,8 @@ class KeyManager {
         return privateKeyAddress.base58String()
     }
     
-    class func getPublicKey(name: String) -> String {
+    
+    class func getKey(name: String) -> BTCKey {
         
         var key: BTCKey?
         
@@ -56,6 +57,25 @@ class KeyManager {
             key = readKeyFromDB(name)
         }
         
+        return key!
+    }
+    
+    class func generateMultiSigScript(name: String, pubKeys: NSArray) {
+        let script = BTCScript(publicKeys: pubKeys, signaturesRequired: 2)
+        println(script.scriptHashAddress())
+    }
+    
+    class func getPublicKey(name: String) -> String {
+        
+        var key: BTCKey?
+        
+        if !addressesDBExists() {
+            createAddressesDB()
+            key = createKey(name)
+        } else {
+            key = readKeyFromDB(name)
+        }
+
         let publicKeyAddress = BTCPublicKeyAddress(data: BTCHash160(key?.publicKey))
         
         return publicKeyAddress.base58String()

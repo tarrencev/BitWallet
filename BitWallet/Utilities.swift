@@ -8,7 +8,7 @@
 
 import UIKit
 
-let colors = [0x8E44AD, 0x2C3E50, 0xF1C40F, 0xF39C12, 0xC0392B]
+let colors = [0x3498DB, 0x8E44AD, 0x42586E, 0x2C3E50]
 
 class Utilities {
     
@@ -19,13 +19,15 @@ class Utilities {
             color = UIColor( red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha:CGFloat(alpha) )
         return color
     }
-    
+
     class func baseColor() -> UIColor {
-        return colorize(0x3498DB, alpha: 1)
+        let rand = Int(2)
+
+        return colorize(colors[rand], alpha: 1)
     }
-    
+    //0x16A085
     class func secondaryColor() -> UIColor {
-        return colorize(0x16A085, alpha: 1)
+        return colorize(0x2C3E50, alpha: 1)
     }
     
     class func getColorForIndex(index: Int) -> UIColor {

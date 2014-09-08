@@ -32,7 +32,7 @@ class UserInfoManager {
     }
     
     class func getPublicAddress() -> String {
-        return "17qHdTwxQCkKs3GX56mUzjBrYKEpvbNaPX"
+        return "3Eyxv9hwrHP7Tq77A2gsLr2JtnjzXyNXTk"
     }
     
     class func getUsername() -> String? {

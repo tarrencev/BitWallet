@@ -14,9 +14,11 @@ class TransactionsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         let sendInitiatorCellNib = UINib(nibName: "TransactionsTableViewCell", bundle: nil)
         tableView.registerNib(sendInitiatorCellNib, forCellReuseIdentifier: "transactionsCell")
+        
+        self.tableView.backgroundColor = .clearColor()
 
         Chain.sharedInstance().getAddressTransactions(UserInfoManager.getPublicAddress(), limit: 2, completionHandler: { (response, error) -> Void in
             
@@ -34,6 +36,11 @@ class TransactionsTableViewController: UITableViewController {
                 println(error)
             }
         })
+    }
+    
+    func viewIsScrollingOnScreen() {
+        println("scrolling on screen")
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {

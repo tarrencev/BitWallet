@@ -17,6 +17,7 @@ class TransactionsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.backgroundColor = .clearColor()
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

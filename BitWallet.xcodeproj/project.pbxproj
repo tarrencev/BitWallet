@@ -34,6 +34,12 @@
 		13FAE3B1199DA02000107512 /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13FAE3AF199DA02000107512 /* search@2x.png */; };
 		13FAE3B7199E5C1100107512 /* TransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FAE3B6199E5C1100107512 /* TransactionsTableViewController.swift */; };
 		187E16A05675405CAD606ABD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3F6887541E49CC9F7B2407 /* libPods.a */; };
+		251F333719B6BCB0009DCF30 /* TransactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251F333619B6BCB0009DCF30 /* TransactViewController.swift */; };
+		251F333B19B82398009DCF30 /* bank.png in Resources */ = {isa = PBXBuildFile; fileRef = 251F333A19B82398009DCF30 /* bank.png */; };
+		251F334519B82C89009DCF30 /* wallet.png in Resources */ = {isa = PBXBuildFile; fileRef = 251F334419B82C89009DCF30 /* wallet.png */; };
+		251F334719B83180009DCF30 /* cash_receiving.png in Resources */ = {isa = PBXBuildFile; fileRef = 251F334619B83180009DCF30 /* cash_receiving.png */; };
+		251F334919B83269009DCF30 /* cash_receiving@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 251F334819B83269009DCF30 /* cash_receiving@2x.png */; };
+		251F334B19B832B4009DCF30 /* wallet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 251F334A19B832B4009DCF30 /* wallet@2x.png */; };
 		2573AB5919A93AFA006D3770 /* TransactionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2573AB5719A93AFA006D3770 /* TransactionsTableViewCell.swift */; };
 		2573AB5A19A93AFA006D3770 /* TransactionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2573AB5819A93AFA006D3770 /* TransactionsTableViewCell.xib */; };
 		25CF50ED19AAC197004B99DF /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CF50EC19AAC197004B99DF /* KeyManager.swift */; };
@@ -88,6 +94,12 @@
 		13FAE3AE199DA02000107512 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		13FAE3AF199DA02000107512 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
 		13FAE3B6199E5C1100107512 /* TransactionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewController.swift; sourceTree = "<group>"; };
+		251F333619B6BCB0009DCF30 /* TransactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactViewController.swift; sourceTree = "<group>"; };
+		251F333A19B82398009DCF30 /* bank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bank.png; sourceTree = "<group>"; };
+		251F334419B82C89009DCF30 /* wallet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wallet.png; sourceTree = "<group>"; };
+		251F334619B83180009DCF30 /* cash_receiving.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cash_receiving.png; sourceTree = "<group>"; };
+		251F334819B83269009DCF30 /* cash_receiving@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cash_receiving@2x.png"; sourceTree = "<group>"; };
+		251F334A19B832B4009DCF30 /* wallet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wallet@2x.png"; sourceTree = "<group>"; };
 		2573AB5719A93AFA006D3770 /* TransactionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewCell.swift; sourceTree = "<group>"; };
 		2573AB5819A93AFA006D3770 /* TransactionsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionsTableViewCell.xib; sourceTree = "<group>"; };
 		25CF50EC19AAC197004B99DF /* KeyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
@@ -185,6 +197,7 @@
 		1361A2CB198EC3C3004CABAD /* BitWallet */ = {
 			isa = PBXGroup;
 			children = (
+				251F333519B6BC6F009DCF30 /* Transact */,
 				2573AB4A19A93736006D3770 /* Widgets */,
 				133EA7C71993D39F00BCA19E /* Models */,
 				1345C81D198ECBFA004A50C5 /* Receive */,
@@ -240,6 +253,19 @@
 				13FAE3A3199D9B8400107512 /* qr_code@2x.png */,
 			);
 			name = Icons;
+			sourceTree = "<group>";
+		};
+		251F333519B6BC6F009DCF30 /* Transact */ = {
+			isa = PBXGroup;
+			children = (
+				251F333619B6BCB0009DCF30 /* TransactViewController.swift */,
+				251F333A19B82398009DCF30 /* bank.png */,
+				251F334419B82C89009DCF30 /* wallet.png */,
+				251F334A19B832B4009DCF30 /* wallet@2x.png */,
+				251F334619B83180009DCF30 /* cash_receiving.png */,
+				251F334819B83269009DCF30 /* cash_receiving@2x.png */,
+			);
+			name = Transact;
 			sourceTree = "<group>";
 		};
 		2573AB4919A93711006D3770 /* Utils */ = {
@@ -375,15 +401,20 @@
 				1345C80D198EC4B4004A50C5 /* ReceiveViewController.xib in Resources */,
 				13FAE3A9199D9B8400107512 /* qr_code@2x.png in Resources */,
 				13FAE3B1199DA02000107512 /* search@2x.png in Resources */,
+				251F334919B83269009DCF30 /* cash_receiving@2x.png in Resources */,
 				13FAE3B0199DA02000107512 /* search.png in Resources */,
 				13FAE3A8199D9B8400107512 /* qr_code.png in Resources */,
 				1361A2D4198EC3C3004CABAD /* Main.storyboard in Resources */,
 				25CF50FD19AF7BEB004B99DF /* LICENSE in Resources */,
+				251F333B19B82398009DCF30 /* bank.png in Resources */,
 				1361A2D6198EC3C3004CABAD /* Images.xcassets in Resources */,
 				13FAE3A6199D9B8400107512 /* nearby.png in Resources */,
 				2573AB5A19A93AFA006D3770 /* TransactionsTableViewCell.xib in Resources */,
+				251F334B19B832B4009DCF30 /* wallet@2x.png in Resources */,
 				13FAE3A7199D9B8400107512 /* nearby@2x.png in Resources */,
+				251F334519B82C89009DCF30 /* wallet.png in Resources */,
 				13BDA5A4198F18F8009A1337 /* SendInitiatorTableViewCell.xib in Resources */,
+				251F334719B83180009DCF30 /* cash_receiving.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +473,7 @@
 				13196062199980DB006368B2 /* SendNavViewController.swift in Sources */,
 				1345C80C198EC4B4004A50C5 /* ReceiveViewController.swift in Sources */,
 				25CF50ED19AAC197004B99DF /* KeyManager.swift in Sources */,
+				251F333719B6BCB0009DCF30 /* TransactViewController.swift in Sources */,
 				13FAE3B7199E5C1100107512 /* TransactionsTableViewController.swift in Sources */,
 				2573AB5919A93AFA006D3770 /* TransactionsTableViewCell.swift in Sources */,
 				25F5863519A982870077EB93 /* TransactionModel.swift in Sources */,

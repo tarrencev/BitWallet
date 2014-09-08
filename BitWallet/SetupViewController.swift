@@ -20,7 +20,6 @@ class SetupViewController: UIViewController {
     @IBAction func keyBtnPress(sender: AnyObject) {
         let button = sender as UIButton
         
-        
         switch (button.tag) {
             case 201:
                 let keyName = "key1",
