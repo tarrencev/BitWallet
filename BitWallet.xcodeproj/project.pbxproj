@@ -40,6 +40,8 @@
 		251F334719B83180009DCF30 /* cash_receiving.png in Resources */ = {isa = PBXBuildFile; fileRef = 251F334619B83180009DCF30 /* cash_receiving.png */; };
 		251F334919B83269009DCF30 /* cash_receiving@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 251F334819B83269009DCF30 /* cash_receiving@2x.png */; };
 		251F334B19B832B4009DCF30 /* wallet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 251F334A19B832B4009DCF30 /* wallet@2x.png */; };
+		2553FAF419BE056B00FA3147 /* Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 2553FAF219BE056B00FA3147 /* Check.png */; };
+		2553FAF519BE056B00FA3147 /* Clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 2553FAF319BE056B00FA3147 /* Clock.png */; };
 		2573AB5919A93AFA006D3770 /* TransactionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2573AB5719A93AFA006D3770 /* TransactionsTableViewCell.swift */; };
 		2573AB5A19A93AFA006D3770 /* TransactionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2573AB5819A93AFA006D3770 /* TransactionsTableViewCell.xib */; };
 		25CF50ED19AAC197004B99DF /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CF50EC19AAC197004B99DF /* KeyManager.swift */; };
@@ -100,6 +102,8 @@
 		251F334619B83180009DCF30 /* cash_receiving.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cash_receiving.png; sourceTree = "<group>"; };
 		251F334819B83269009DCF30 /* cash_receiving@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cash_receiving@2x.png"; sourceTree = "<group>"; };
 		251F334A19B832B4009DCF30 /* wallet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wallet@2x.png"; sourceTree = "<group>"; };
+		2553FAF219BE056B00FA3147 /* Check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Check.png; sourceTree = "<group>"; };
+		2553FAF319BE056B00FA3147 /* Clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clock.png; sourceTree = "<group>"; };
 		2573AB5719A93AFA006D3770 /* TransactionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewCell.swift; sourceTree = "<group>"; };
 		2573AB5819A93AFA006D3770 /* TransactionsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionsTableViewCell.xib; sourceTree = "<group>"; };
 		25CF50EC19AAC197004B99DF /* KeyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 				1345C806198EC476004A50C5 /* ProfileViewController.swift */,
 				13FAE3B6199E5C1100107512 /* TransactionsTableViewController.swift */,
 				2573AB5719A93AFA006D3770 /* TransactionsTableViewCell.swift */,
+				2553FAF219BE056B00FA3147 /* Check.png */,
+				2553FAF319BE056B00FA3147 /* Clock.png */,
 				2573AB5819A93AFA006D3770 /* TransactionsTableViewCell.xib */,
 				25F5863419A982870077EB93 /* TransactionModel.swift */,
 			);
@@ -414,7 +420,9 @@
 				13FAE3A7199D9B8400107512 /* nearby@2x.png in Resources */,
 				251F334519B82C89009DCF30 /* wallet.png in Resources */,
 				13BDA5A4198F18F8009A1337 /* SendInitiatorTableViewCell.xib in Resources */,
+				2553FAF419BE056B00FA3147 /* Check.png in Resources */,
 				251F334719B83180009DCF30 /* cash_receiving.png in Resources */,
+				2553FAF519BE056B00FA3147 /* Clock.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

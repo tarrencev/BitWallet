@@ -13,7 +13,7 @@ let KEYCHAIN_SERVICE: String =  "BitWallet"
 
 class UserInfoManager {
     class func createUserAccount(username: String) {
-        let beaconUUID = NSUUID.UUID().UUIDString
+        let beaconUUID = NSUUID().UUIDString
 //        let keyChainItem = CTKeychainItem(service: KEYCHAIN_SERVICE, account: username)
 //        let privateKey = generatePrivateKey()
         
