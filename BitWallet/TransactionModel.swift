@@ -15,7 +15,7 @@ struct Transaction {
         addresses: Array<String>
         
         init(data: NSDictionary) {
-            value = data["value"] as NSNumber
+            value = Int(data["value"] as NSNumber)
             addresses = data["addresses"] as Array<String>
         }
     }
@@ -25,7 +25,7 @@ struct Transaction {
         addresses: Array<String>
         
         init(data: NSDictionary) {
-            value = data["value"] as NSNumber
+            value = Int(data["value"] as NSNumber)
             addresses = data["addresses"] as Array<String>
         }
     }

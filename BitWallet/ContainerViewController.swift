@@ -56,8 +56,8 @@ class ContainerViewController: UIViewController, UIScrollViewDelegate {
         self.view.backgroundColor = Utilities.colorize(0x35485c, alpha: 1)
     }
     
-    func scrollViewDidScroll(scrollView: UIScrollView!) {
-        let pageWidth = scrollView!.frame.size.width,
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let pageWidth = scrollView.frame.size.width,
             calculatedScrollPage = Int(floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1)
         if curScrollPage != calculatedScrollPage {
             curScrollPage = calculatedScrollPage

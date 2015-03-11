@@ -25,7 +25,7 @@ class ReceiveViewController: UIViewController {
         self.view.addSubview(address2)
         self.view.addSubview(address3)
         
-        let pubKeys: NSArray = NSArray(objects: KeyManager.getKey("key1").valueForKey("compressedPublicKey"), KeyManager.getKey("key2").valueForKey("compressedPublicKey"), KeyManager.getKey("key3").valueForKey("compressedPublicKey"))
+        let pubKeys: NSArray = NSArray(objects: KeyManager.getKey("key1").valueForKey("compressedPublicKey")!, KeyManager.getKey("key2").valueForKey("compressedPublicKey")!, KeyManager.getKey("key3").valueForKey("compressedPublicKey")!)
         KeyManager.generateMultiSigScript("test", pubKeys: pubKeys)
     }
 
@@ -33,16 +33,4 @@ class ReceiveViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

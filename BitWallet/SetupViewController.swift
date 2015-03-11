@@ -59,7 +59,7 @@ class SetupViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 //         Get the new view controller using segue.destinationViewController.
 //         Pass the selected object to the new view controller.
         

@@ -58,7 +58,7 @@ class TransactionsTableViewController: UITableViewController {
         return transactions.count
     }
 
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("transactionsCell", forIndexPath: indexPath) as TransactionsTableViewCell
 
         let transaction = transactions[indexPath.row],
@@ -70,7 +70,7 @@ class TransactionsTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 65
     }
 }

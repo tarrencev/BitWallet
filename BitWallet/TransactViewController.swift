@@ -21,25 +21,22 @@ class TransactViewController: UIViewController, UITextFieldDelegate {
             bottomBorder = UIView(frame: CGRectMake(0, transactInputAccessoryView.frame.size.height, transactInputAccessoryView.frame.size.width, 0.5)),
             topBorder = UIView(frame: CGRectMake(0, 0, transactInputAccessoryView.frame.size.width, 0.5))
         
-//        CGContextSetShouldAntialias(ctx, NO)
-//        CGContextSetShouldAntialias(<#context: CGContext!#>, <#shouldAntialias: Bool#>)
-        
         centerBorder.backgroundColor = Utilities.colorize(0xb5b5b5, alpha: 1)
         bottomBorder.backgroundColor = Utilities.colorize(0xb5b5b5, alpha: 1)
         topBorder.backgroundColor = Utilities.colorize(0xb5b5b5, alpha: 1)
         
         requestButton.setTitle("Request", forState: UIControlState.Normal)
         requestButton.tag = 300
-        requestButton.titleLabel.font = UIFont(name: "HelveticaNeue", size: 20)
+        requestButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 20)
         requestButton.backgroundColor = Utilities.colorize(0xfcfcfc, alpha: 1)
-        requestButton.setTitleColor(.blackColor(), forState: .Normal)
+        requestButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
         requestButton.addTarget(self, action: Selector("createTransaction:"), forControlEvents: UIControlEvents.TouchUpInside)
 
         sendButton.setTitle("Send", forState: UIControlState.Normal)
         sendButton.tag = 301
-        sendButton.titleLabel.font = UIFont(name: "HelveticaNeue", size: 20)
+        sendButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 20)
         sendButton.backgroundColor = Utilities.colorize(0xfcfcfc, alpha: 1)
-        sendButton.setTitleColor(.blackColor(), forState: .Normal)
+        sendButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
         sendButton.addTarget(self, action: Selector("createTransaction:"), forControlEvents: UIControlEvents.TouchUpInside)
 
         transactInputAccessoryView.addSubview(requestButton)
@@ -139,7 +136,7 @@ class TransactViewController: UIViewController, UITextFieldDelegate {
         amountView.viewWithTag(500)?.becomeFirstResponder()
     }
     
-    func textField(textField: UITextField!, shouldChangeCharactersInRange range: NSRange, replacementString string: String!) -> Bool {
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         let text: String = textField.text
         if countElements(text) == 0 {
             textField.text = "฿" + string

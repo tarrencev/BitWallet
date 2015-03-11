@@ -31,7 +31,7 @@ class SendNavViewController: UIViewController, UITextFieldDelegate {
         addCloseButton.addTarget(self, action: "addUser", forControlEvents: .TouchUpInside)
 
         addCloseButton.setTitle("+", forState: .Normal)
-        addCloseButton.titleLabel.font = UIFont(name: "Helvetica", size: 34)
+        addCloseButton.titleLabel?.font = UIFont(name: "Helvetica", size: 34)
         self.view.addSubview(addCloseButton)
         
         // Setup search texfield
@@ -45,7 +45,7 @@ class SendNavViewController: UIViewController, UITextFieldDelegate {
         // Setup toggle nearby button
         nearbyButton.frame = CGRectMake(0, 44, 106, 120)
         nearbyButton.setTitle("Nearby", forState: .Normal)
-        nearbyButton.titleLabel.font = UIFont(name: "Helvetica", size: 18)
+        nearbyButton.titleLabel?.font = UIFont(name: "Helvetica", size: 18)
         nearbyButton.titleEdgeInsets = UIEdgeInsetsMake(65, -50, 0, 0)
         nearbyButton.setImage(UIImage(named: "nearby"), forState: .Normal)
         nearbyButton.imageEdgeInsets = UIEdgeInsetsMake(-40, 20, 0, 0)
@@ -54,7 +54,7 @@ class SendNavViewController: UIViewController, UITextFieldDelegate {
         // Setup toggle scan QR button
         scanQrButton.frame = CGRectMake(107, 44, 106, 120)
         scanQrButton.setTitle("Scan QR", forState: .Normal)
-        scanQrButton.titleLabel.font = UIFont(name: "Helvetica", size: 18)
+        scanQrButton.titleLabel?.font = UIFont(name: "Helvetica", size: 18)
         scanQrButton.titleEdgeInsets = UIEdgeInsetsMake(65, -50, 0, 0)
         scanQrButton.setImage(UIImage(named: "qr_code"), forState: .Normal)
         scanQrButton.imageEdgeInsets = UIEdgeInsetsMake(-40, 20, 0, 0)
@@ -63,7 +63,7 @@ class SendNavViewController: UIViewController, UITextFieldDelegate {
         // Setup toggle enter info button
         enterInfoButton.frame = CGRectMake(214, 44, 106, 120)
         enterInfoButton.setTitle("Search", forState: .Normal)
-        enterInfoButton.titleLabel.font = UIFont(name: "Helvetica", size: 18)
+        enterInfoButton.titleLabel?.font = UIFont(name: "Helvetica", size: 18)
         enterInfoButton.titleEdgeInsets = UIEdgeInsetsMake(65, -50, 0, 0)
         enterInfoButton.setImage(UIImage(named: "search"), forState: .Normal)
         enterInfoButton.imageEdgeInsets = UIEdgeInsetsMake(-40, 20, 0, 0)
@@ -108,14 +108,14 @@ class SendNavViewController: UIViewController, UITextFieldDelegate {
         plusButtonState == .Add ? rotateToCloseState() : rotateToAddState()
     }
     
-    func textFieldDidBeginEditing(textField: UITextField!) {
+    func textFieldDidBeginEditing(textField: UITextField) {
         addCloseButton.removeTarget(self, action: "addUser", forControlEvents: .TouchUpInside)
         addCloseButton.addTarget(self, action: "closeSearch", forControlEvents: .TouchUpInside)
         
         togglePlusButton()
     }
     
-    func textFieldDidEndEditing(textField: UITextField!) {
+    func textFieldDidEndEditing(textField: UITextField) {
         addCloseButton.removeTarget(self, action: "closeSearch", forControlEvents: .TouchUpInside)
         addCloseButton.addTarget(self, action: "addUser", forControlEvents: .TouchUpInside)
         

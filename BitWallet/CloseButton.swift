@@ -13,6 +13,6 @@ class CloseButton: UIButton {
     override func drawRect(rect: CGRect) {
         self.transform = CGAffineTransformMakeRotation(CGFloat(M_PI / -4))
         self.setTitle("+", forState: UIControlState.Normal)
-        self.titleLabel.font = UIFont(name: "Helvetica", size: 30)
+        self.titleLabel?.font = UIFont(name: "Helvetica", size: 30)
     }
 }

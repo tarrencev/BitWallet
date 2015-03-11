@@ -16,13 +16,13 @@ class KeyManager {
             secret = NSMutableData(length: Int(length))
         var sanityCheck = noErr
         
-        sanityCheck = SecRandomCopyBytes(kSecRandomDefault, length, UnsafeMutablePointer<UInt8>(secret.mutableBytes))
+        sanityCheck = SecRandomCopyBytes(kSecRandomDefault, length, UnsafeMutablePointer<UInt8>(secret!.mutableBytes))
         
         if sanityCheck != noErr {
             println("Issue generating private key")
         }
         
-        assert(secret.length == 32, "Secret must be 32 bytes long")
+        assert(secret!.length == 32, "Secret must be 32 bytes long")
         return BTCKey(privateKey: secret)
     }
     

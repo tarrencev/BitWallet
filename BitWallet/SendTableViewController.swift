@@ -43,7 +43,7 @@ class SendTableViewController: UITableViewController, SendInitiatorCellDelegate 
     
     func closeSelectedCell() {
         if selectedIndex != nil {
-            let cell = self.tableView.cellForRowAtIndexPath(selectedIndex) as SendInitiatorTableViewCell
+            let cell = self.tableView.cellForRowAtIndexPath(selectedIndex!) as SendInitiatorTableViewCell
             closeInitiatorCell(cell, indexPath: selectedIndex!)
         }
     }
@@ -66,15 +66,15 @@ class SendTableViewController: UITableViewController, SendInitiatorCellDelegate 
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return self.sections.count
     }
     
-    override func tableView(tableView: UITableView!, heightForHeaderInSection section: Int) -> CGFloat {
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return SECTION_HEADER_HEIGHT
     }
     
-    override func tableView(tableView: UITableView!, viewForHeaderInSection section: Int) -> UIView! {
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView{
         var sendSectionHeaderView = SendSectionHeaderView(frame: CGRectMake(0, 0, tableView.frame.size.width, SECTION_HEADER_HEIGHT))
         
         let sectionName = sections[section]
@@ -83,13 +83,13 @@ class SendTableViewController: UITableViewController, SendInitiatorCellDelegate 
         return sendSectionHeaderView as UIView
     }
 
-    override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let rowsInSection = sectionValues[section].count
         return rowsInSection
     }
 
     
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("sendInitiatorCell") as SendInitiatorTableViewCell,
             username = sectionValues[indexPath.section][indexPath.row]
         
@@ -144,7 +144,7 @@ class SendTableViewController: UITableViewController, SendInitiatorCellDelegate 
 
     }
     
-    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath) as SendInitiatorTableViewCell
         
         // Selected the same cell again so collapse it
@@ -157,7 +157,7 @@ class SendTableViewController: UITableViewController, SendInitiatorCellDelegate 
     }
     
     // Set row height
-    override func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if cellIsSelected(indexPath) {
             return 335
         }
